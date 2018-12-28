@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "opencitymarket-20181227162602-authRole",
+            "UnauthRoleArn": "arn:aws:iam::120764137631:role/opencitymarket-20181227162602-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::120764137631:role/opencitymarket-20181227162602-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "opencitymarket-20181227162602-deployment",
+            "UnauthRoleName": "opencitymarket-20181227162602-unauthRole",
+            "StackName": "opencitymarket-20181227162602",
+            "StackId": "arn:aws:cloudformation:us-west-2:120764137631:stack/opencitymarket-20181227162602/28532f10-0a37-11e9-85cc-500c32c86cd1"
+        }
+    }
+}
