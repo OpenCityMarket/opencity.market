@@ -8,7 +8,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h3><span>A popup market of local indie shops,&nbsp;</span><span>curated by you and your neighbors.</span></h3>
+          <h3><span>A popup market of local indie shops,&nbsp;</span><br/><span>curated by you and your neighbors.</span></h3>
         </header>
       </div>
     );
