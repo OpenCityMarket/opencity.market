@@ -24,7 +24,7 @@ const pluginWrapper = () => {
  *  Eggplant: #4F3E55
  */
 
-const originalColors = ['#FBF5F2', '#b02a2a', '#a2c0de'];
+const originalColors = ['#FBF5F2', '#b02a2a', '#bbd1e7'];
 
 class App extends React.Component {
   constructor(props) {
