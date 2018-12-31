@@ -18,7 +18,6 @@ class TypeformWidget extends React.Component {
           <ReactTypeformEmbed
             popup={false}
             opacity={0}
-            autoOpen={true}
             url={'https://raincitymarket.typeform.com/to/dWa0Ip'}
             hideHeaders={true}
             hideFooter={true}/>
