@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ReactFullpage from '@fullpage/react-fullpage';
 import TypeformWidget from './TypeformWidget';
+import Form from './Form';
 import logo from './images/logo.svg';
 import populuxe from './images/populuxe.png';
 import './App.css';
@@ -89,7 +90,7 @@ class App extends React.Component {
                 </div>
               </div>
               <div className="section fp-noscroll section-three">
-                <TypeformWidget/>
+                <Form/>
               </div>                            
             </ReactFullpage.Wrapper>
           )}
