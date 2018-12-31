@@ -55,6 +55,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <ReactFullpage
+          licenseKey={"AFB8D2CC-2D904B8B-88534623-E756EC1D"}
           debug /* Debug logging */
           scrollOverflow={false}
           navigation
@@ -69,9 +70,9 @@ class App extends React.Component {
                     <span>A popup market of local indie shops,</span><br/>
                     <span>curated by you and your neighbors.</span>
                 </h3>
-                <div class="more">
+                <div className="more">
                   <div>Want to come to our upcoming Seattle event?</div>
-                  <i onClick={() => fullpageApi.moveSectionDown()} class="fas fa-angle-down more-arrow"></i>
+                  <i onClick={() => fullpageApi.moveSectionDown()} className="fas fa-angle-down more-arrow"></i>
                 </div>
               </div>
               <div className="section section-two">
@@ -82,9 +83,9 @@ class App extends React.Component {
                 <div className="event">
                   <a href="https://www.populuxebrewing.com" target="_blank"><img src={populuxe} className="populuxe" alt="logo" /></a>
                 </div>
-                <div class="more">
+                <div className="more">
                   <div>Vote for your favorite popups.</div>
-                  <i onClick={() => fullpageApi.moveSectionDown()} class="fas fa-angle-down more-arrow"></i>
+                  <i onClick={() => fullpageApi.moveSectionDown()} className="fas fa-angle-down more-arrow"></i>
                 </div>
               </div>
               <div className="section fp-noscroll section-three">
