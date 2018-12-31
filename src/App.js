@@ -56,7 +56,7 @@ class App extends React.Component {
       <div className="App">
         <ReactFullpage
           debug /* Debug logging */
-          scrollOverflow
+          scrollOverflow={false}
           navigation
           onLeave={this.onLeave.bind(this)}
           sectionsColor={this.state.sectionsColor}
@@ -87,7 +87,7 @@ class App extends React.Component {
                   <i onClick={() => fullpageApi.moveSectionDown()} class="fas fa-angle-down more-arrow"></i>
                 </div>
               </div>
-              <div className="section section-three">
+              <div className="section fp-noscroll section-three">
                 <TypeformWidget/>
               </div>                            
             </ReactFullpage.Wrapper>
