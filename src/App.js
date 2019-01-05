@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ReactFullpage from '@fullpage/react-fullpage';
-import TypeformWidget from './TypeformWidget';
-import logo from './images/logo.svg';
+import logo from './images/ocm-logo.svg';
+import logoH from './images/ocm-logo-horizontal.svg';
 import populuxe from './images/populuxe.png';
 import './App.css';
 
@@ -24,7 +24,7 @@ const pluginWrapper = () => {
  *  Eggplant: #4F3E55
  */
 
-const originalColors = ['#FBF5F2', '#b02a2a', '#bbd1e7'];
+const originalColors = ['#FBF5F2', '#54434f', '#d72847'];
 
 class App extends React.Component {
   constructor(props) {
@@ -76,20 +76,30 @@ class App extends React.Component {
                 </div>
               </div>
               <div className="section section-two">
+                <div className="event">
+                  <img src={logoH} className="logoH" alt="Open City Market" />
+                  <span>@</span>
+                  <a href="https://www.populuxebrewing.com" target="_blank"><img src={populuxe} className="populuxe" alt="Populuxe Brewing" /></a>
+                </div>
                 <h3>
                   <span>We're hosting a popup market on March 2nd</span><br/>
                   <span>at Populuxe Brewing in Phrelard, Seattle.</span>
                 </h3>
-                <div className="event">
-                  <a href="https://www.populuxebrewing.com" target="_blank"><img src={populuxe} className="populuxe" alt="logo" /></a>
-                </div>
                 <div className="more">
                   <div>Vote for your favorite popups.</div>
                   <i onClick={() => fullpageApi.moveSectionDown()} className="fas fa-angle-down more-arrow"></i>
                 </div>
               </div>
               <div className="section fp-noscroll section-three">
-                <TypeformWidget/>
+                <div className="event">
+                  <img src={logoH} className="logoH" alt="Open City Market" />
+                </div>
+                <form action="https://getform.io/f/a79ea2ef-201e-4a7a-9640-6d4a067dd892" method="POST">
+                  <input type="text" id="name" placeholder="Name" className="highlight" name="name" />
+                  <input type="email" id="email" placeholder="Email Address" className="highlight" name="email" />
+                  <textarea id="response" placeholder="What kinds of shops do you want at our Populuxe market event?" className="highlight" name="response" />
+                  <input type="submit" value="Send" />
+                </form>
               </div>                            
             </ReactFullpage.Wrapper>
           )}

@@ -4,8 +4,8 @@
 
 .App-logo {
   animation: App-logo-appear 1 0.7s ease-in;
-  height: 40vmin;
-  margin-top: -25px;
+  height: 46vmin;
+  margin-top: -80px;
 }
 
 
@@ -112,7 +112,116 @@ h3 span {
   background: #162023;
 }
 
-.event .populuxe {
-  height: 30px;
-  margin-top: 10px;
+.event {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: inline;
 }
+
+.event img.logoH {
+  height: 40px;
+  margin-bottom: 10px;
+  vertical-align: middle;
+}
+
+.event img.populuxe {
+  height: 40px;
+  margin-bottom: 22px;
+  vertical-align: middle;
+}
+
+.event span {
+  line-height: 40px;
+  font-size: 36px;
+  font-weight: 600;
+  color: #d72847;
+  padding: 0 8px;
+  margin: 0;
+}
+
+/* Forms */
+
+form {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input, textarea {
+  margin-top: 24px;
+  font-size: 20px;
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
+  height: 120px;
+}
+
+input[type="email"].highlight, input[type="text"].highlight, input[type="url"].highlight, textarea.highlight {
+
+  transition: all .25s ease-in-out;
+  background-color: #efa9b5;
+  color: black;
+  font-weight: 600;
+  border: none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #83697b;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #83697b;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #83697b;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #83697b;
+}
+
+input[type="email"], input[type="text"], input[type="url"], textarea {
+  padding: 12px 16px;
+}
+input[type="email"], input[type="text"], input[type="url"], textarea {
+
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 16px 20px;
+  background-color: #f6f8fe;
+  border: 2px solid transparent;
+  font: inherit;
+      line-height: inherit;
+  line-height: 1.6;
+  color: #5c5f6e;
+  border-radius: 2px;
+  transition: all .25s ease-in-out;
+  background-image: url(/assets/img/components/input/placeholder@2x.png);
+  background-size: 20px 20px;
+  background-position: calc(100% - 20px) 22px;
+  background-repeat: no-repeat;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input, button, textarea {
+  font: inherit;
+}
+
+input[type="submit"] {
+ border: 0;
+ background-color: #26CEC3;
+ color: white;
+ box-shadow: none;
+ border-radius: 4px;
+ padding: 10px 24px;
+ float: right;
+} 
