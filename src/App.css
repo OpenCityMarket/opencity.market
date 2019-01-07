@@ -204,7 +204,7 @@ input[type="email"].highlight, input[type="checkbox"].highlight, input[type="tex
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #c2b2be;
+  color: #83697b;
 }
 ::-moz-placeholder { /* Firefox 19+ */
   color: #83697b;
