@@ -12,16 +12,12 @@ const pluginWrapper = () => {
    */
 };
 
-/*  Pinkish white: #F3F3F2
- *  Purple: #6F3DC7
- *  Charcoal: #162023
- *  Redish Orange: #D44A4A
- *  Alternates:
- *  Burnt Orange: #AC583A
- *  Light bluish grey: #d4e2f0
- *  Lighter bluish grey: #c7daec
- *  Darker bluish grey: #a2c0de
- *  Eggplant: #4F3E55
+/*  OCM BLUE: #19d8d6
+ *  whitish pink: #FBF5F2
+ *  Charcoal: #54434f
+ *  dark pinkish red: #D72847
+ *  light pinkish red: #efa9b5
+ *  accent color: #FECC63
  */
 
 const originalColors = ['#FBF5F2', '#54434f', '#d72847'];
@@ -76,15 +72,21 @@ class App extends React.Component {
                 </div>
               </div>
               <div className="section section-two">
-                <div className="event">
-                  <img src={logoH} className="logoH" alt="Open City Market" />
-                  <span>@</span>
-                  <a href="https://www.populuxebrewing.com" target="_blank"><img src={populuxe} className="populuxe" alt="Populuxe Brewing" /></a>
-                </div>
                 <h3>
                   <span>We're hosting a popup market on March 2nd</span><br/>
                   <span>at Populuxe Brewing in Phrelard, Seattle.</span>
                 </h3>
+                <div className="event">
+                  <img src={logoH} className="logoH" alt="Open City Market" />
+                  <span>@</span>
+                  <a href="https://www.populuxebrewing.com" target="_blank"><img src={populuxe} className="populuxe" alt="Populuxe Brewing" /></a>
+                </div>  
+                <div className="info-block">
+                  <h4>Catchy subtitle here</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, graeco lucilius in vis, usu ea alia sapientem. Sea ne nisl meis assum, eum id congue reprimique. Eos alii aperiam vivendo ne. In dictas gubergren mel, has petentium consequuntur at. At vim vide alterum utroque.
+                  </p>  
+                </div>              
                 <div className="more">
                   <div>Vote for your favorite popups.</div>
                   <i onClick={() => fullpageApi.moveSectionDown()} className="fas fa-angle-down more-arrow"></i>
@@ -93,11 +95,24 @@ class App extends React.Component {
               <div className="section fp-noscroll section-three">
                 <div className="event">
                   <img src={logoH} className="logoH" alt="Open City Market" />
-                </div>
+                  <div className="subtitle">
+                    Signup for the guest list for our March 2nd Popup Market.
+                  </div>
+                </div>  
                 <form action="https://getform.io/f/a79ea2ef-201e-4a7a-9640-6d4a067dd892" method="POST">
                   <input type="text" id="name" placeholder="Name" className="highlight" name="name" />
                   <input type="email" id="email" placeholder="Email Address" className="highlight" name="email" />
-                  <textarea id="response" placeholder="What kinds of shops do you want at our Populuxe market event?" className="highlight" name="response" />
+                  <textarea id="response" placeholder="What kinds of shops do you want at the Populuxe market?" className="highlight" name="response" />
+                  <label className="container">
+                    I have a shop and I'd like to be featured at the market.
+                    <input type="checkbox" name="vendor" id="vendor" />
+                    <span className="checkmark"></span>
+                  </label>
+                  <label className="container">
+                    I have space where you can host the next market.
+                    <input type="checkbox" name="space" id="space" />
+                    <span className="checkmark"></span>
+                  </label>
                   <input type="submit" value="Send" />
                 </form>
               </div>                            

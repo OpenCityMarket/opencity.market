@@ -11,14 +11,33 @@
 
 h3 {
   font-family: 'Amatic SC', cursive;
-  font-size: 38px;
-  line-height: 42px;
-  margin: 10px 0;
+  font-size: 41px;
+  line-height: 44px;
+  margin: 8px 0;
 }
 
 h3 span {
   display: inline-block;
   animation: subtitle-appear 1 1.6s ease-in;
+}
+
+.info-block {
+  margin-top: 44px;
+}
+
+.info-block h4 {
+  margin-bottom: 10px;
+  padding: 0;
+  font-weight: 900;
+  font-size: 19px;
+}
+
+.info-block p {
+  max-width: 500px;
+  margin: 0 auto;
+
+  font-size: 18px;
+  color: white;
 }
 
 .more {
@@ -113,65 +132,79 @@ h3 span {
 }
 
 .event {
-  position: absolute;
-  top: 30px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  display: inline;
+  margin: 0 auto 0 auto;
+  padding-top: 24px;
 }
 
 .event img.logoH {
-  height: 40px;
-  margin-bottom: 10px;
+  height: 30px;
+  margin-bottom: 8px;
   vertical-align: middle;
 }
 
 .event img.populuxe {
-  height: 40px;
-  margin-bottom: 22px;
+  height: 30px;
+  margin-bottom: 14px;
   vertical-align: middle;
 }
 
 .event span {
-  line-height: 40px;
-  font-size: 36px;
+  line-height: 30px;
+  font-size: 26px;
   font-weight: 600;
   color: #d72847;
-  padding: 0 8px;
+  padding: 0 3px;
   margin: 0;
 }
+
+.section-three .event img.logoH {
+  height: 75px;
+  margin-bottom: 0;
+}
+
+.section-three .event {
+  padding-bottom: 10px;
+  width: 675px;
+}
+
+.section-two h3 {
+  margin-top: -300px;
+}
+
+.section-three .event .subtitle {
+  color: white;
+  margin-top: 10px;
+  font-weight: 900;
+  font-size: 16px;
+}
+
 
 /* Forms */
 
 form {
-  max-width: 600px;
+  max-width: 575px;
   margin-left: auto;
   margin-right: auto;
-}
-
-input, textarea {
-  margin-top: 24px;
-  font-size: 20px;
+  padding: 20px 0px;
 }
 
 textarea {
   resize: none;
   overflow: auto;
   height: 120px;
+  margin-bottom: 4px;
 }
 
-input[type="email"].highlight, input[type="text"].highlight, input[type="url"].highlight, textarea.highlight {
-
+input[type="email"].highlight, input[type="checkbox"].highlight, input[type="text"].highlight, input[type="url"].highlight, textarea.highlight {
   transition: all .25s ease-in-out;
-  background-color: #efa9b5;
+  background-color: #f2b7c2;
   color: black;
   font-weight: 600;
   border: none;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #83697b;
+  color: #c2b2be;
 }
 ::-moz-placeholder { /* Firefox 19+ */
   color: #83697b;
@@ -183,14 +216,17 @@ input[type="email"].highlight, input[type="text"].highlight, input[type="url"].h
   color: #83697b;
 }
 
-input[type="email"], input[type="text"], input[type="url"], textarea {
-  padding: 12px 16px;
+input[type="submit"] {
+  margin-top: 24px;
 }
-input[type="email"], input[type="text"], input[type="url"], textarea {
 
+input[type="email"], input[type="text"], input[type="url"], textarea {
+  margin-top: 24px;
+  font-size: 28px; 
   width: 100%;
   border: none;
   outline: none;
+  margin-left: -20px;
   padding: 16px 20px;
   background-color: #f6f8fe;
   border: 2px solid transparent;
@@ -206,22 +242,89 @@ input[type="email"], input[type="text"], input[type="url"], textarea {
   background-repeat: no-repeat;
 }
 
-input, button, textarea, select {
-  font: inherit;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-input, button, textarea {
-  font: inherit;
-}
-
 input[type="submit"] {
  border: 0;
- background-color: #26CEC3;
- color: white;
+ background-color: #FECC63;
+ color: #54434f;
+ font-size: 18px;
+ font-weight: 700;
  box-shadow: none;
  border-radius: 4px;
- padding: 10px 24px;
+ padding: 19px 34px;
  float: right;
+ margin-right: -20px;
+} 
+
+
+
+ /* Customize the label (the container) */
+ .container {
+  float: left;
+  margin-left: -20px;
+  padding-left: 25px;
+  border: 0px;
+  color: white;
+  display: block;
+  position: relative;
+  margin-top: 14px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #f2b7c2;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #FECC63;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 } 
