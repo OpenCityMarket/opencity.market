@@ -96,7 +96,7 @@ class App extends React.Component {
                 <div className="event">
                   <img src={logoH} className="logoH" alt="Open City Market" />
                   <div className="subtitle">
-                    Signup for the guest list for our March 2nd Popup Market.
+                    Guest List Signup for our March 2nd Popup Market at Populuxe Brewing.
                   </div>
                 </div>  
                 <form action="https://getform.io/f/a79ea2ef-201e-4a7a-9640-6d4a067dd892" method="POST">
