@@ -1,331 +1,102 @@
+/*  OCM BLUE: #19d8d6
+ *  whitish pink: #FBF5F2
+ *  Charcoal: #54434f
+ *  dark pinkish red: #D72847
+ *  light pinkish red: #efa9b5
+ *  yellow: #FECC63
+ */
+
 .App {
+  font-family: 'Roboto', sans-serif;
   text-align: center;
+  background-color: #FBF5F2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .App-logo {
-  animation: App-logo-appear 1 0.7s ease-in;
-  height: 46vmin;
-  margin-top: -80px;
+  /*animation: App-logo-appear 1 0.7s ease-in;*/
+  height: 300px;
+  margin-top: 55px;
 }
 
 
-h3 {
-  font-family: 'Amatic SC', cursive;
-  font-size: 41px;
-  line-height: 44px;
-  margin: 8px 0;
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  font-size: 35px;
+  line-height: 48px;
+  letter-spacing: 1.4px;
+  margin-top: 14px;
 }
 
-h3 span {
-  display: inline-block;
-  animation: subtitle-appear 1 1.6s ease-in;
+h1 span.em {
+  font-weight: 500;
+  font-style: italic;
+  padding-right: 3px;
+  padding-left: -1px;
 }
 
-.info-block {
-  margin-top: 44px;
+h2 {
+  font-weight: 300; 
+  font-size: 22px;
+  margin-top: 40px;
 }
 
-.info-block h4 {
-  margin-bottom: 10px;
-  padding: 0;
-  font-weight: 900;
-  font-size: 19px;
-}
-
-.info-block p {
-  max-width: 500px;
-  margin: 0 auto;
-
+.button {
+  border: 0;
+  background-color: #D72847;
+  color: white;
   font-size: 18px;
-  color: white;
-}
+  font-weight: 700;
+  box-shadow: none;
+  border-radius: 8px;
+  padding: 18px 10px;
+  margin-top: 44px;
+  margin-bottom: 44px;
+  letter-spacing: -0.5px;
 
-.more {
-  position: absolute;
-  bottom: 15px;
-  width: 100%;
-  text-align: center;
-  animation: more-appear 1 3.2s ease-in;
-}
-
-.more div {
-  font-size: 15px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 900;
-}
-
-.more i {
-  cursor: pointer;
-}
-
-.more .more-arrow {
-  font-size: 38px;
-  animation: more-arrow-bounce infinite 2s ease-in;
-}
-
-.section-one {
-  color: black;
-}
-
-.section-two {
-  color: white;
-}
-
-.section-three {
-  color: black;
-}
-
-
-@keyframes App-logo-appear {
-  from {
-    transform: scale(0.025);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-@keyframes subtitle-appear{
-    0% { opacity:0; }
-    66% { opacity:0; }
-    100% { opacity:1; }
-}
-
-@-webkit-keyframes subtitle-appear{
-    0% { opacity:0; }
-    66% { opacity:0; }
-    100% { opacity:1; }
-}  
-
-@keyframes more-appear{
-  0% { opacity:0; }
-  66% { opacity:0; }
-  100% { opacity:1; }
-}
-
-@-webkit-keyframes more-appear{
-  0% { opacity:0; }
-  66% { opacity:0; }
-  100% { opacity:1; }
-}  
-
-@keyframes more-arrow-bounce {
-  0% { transform: scale(1); }
-  33% { transform: scale(1); }
-  50% { transform: scale(1.1);}
-  66% { transform: scale(1); }
-  75% { transform: scale(1.2); }
-  100% { transform: scale(1); }
-}
-
-@-webkit-keyframes more-arrow-bounce {
-  0% { transform: scale(1); }
-  33% { transform: scale(1); }
-  50% { transform: scale(1.1);}
-  66% { transform: scale(1); }
-  75% { transform: scale(1.2); }
-  100% { transform: scale(1); }
-}
-
-#fp-nav ul li a span, .fp-slidesNav ul li a span {
-  background: #162023;
-}
-
-.event {
-  margin: 0 auto 0 auto;
-  padding-top: 24px;
-}
-
-.event img.logoH {
-  height: 30px;
-  margin-bottom: 8px;
-  vertical-align: middle;
-}
-
-.event img.populuxe {
-  height: 30px;
-  margin-bottom: 14px;
-  vertical-align: middle;
-}
-
-.event span {
-  line-height: 30px;
-  font-size: 26px;
-  font-weight: 600;
-  color: #d72847;
-  padding: 0 3px;
-  margin: 0;
-}
-
-.section-three .event img.logoH {
-  height: 75px;
-  margin-bottom: 0;
-  margin-top: -45px;
-}
-
-.section-three .event {
-  padding-bottom: 10px;
-  width: 675px;
-}
-
-.section-two h3 {
-  margin-top: -300px;
-}
-
-.section-three .event .subtitle {
-  color: white;
-  margin-top: 10px;
-  font-weight: 900;
-  font-size: 16px;
-}
-
-
-/* Forms */
-
-form {
-  max-width: 575px;
+  display: block;
+  width: 200px;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px 0px;
-}
+  text-align: center;
+  text-decoration: none;
+ } 
 
-textarea {
-  resize: none;
-  overflow: auto;
-  height: 120px;
-  margin-bottom: 4px;
-}
-
-input[type="email"].highlight, input[type="checkbox"].highlight, input[type="text"].highlight, input[type="url"].highlight, textarea.highlight {
-  transition: all .25s ease-in-out;
-  background-color: #f2b7c2;
-  color: black;
-  font-weight: 600;
-  border: none;
-}
-
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #83697b;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color: #83697b;
-}
-:-ms-input-placeholder { /* IE 10+ */
-  color: #83697b;
-}
-:-moz-placeholder { /* Firefox 18- */
-  color: #83697b;
-}
-
-input[type="submit"] {
-  margin-top: 24px;
-}
-
-input[type="email"], input[type="text"], input[type="url"], textarea {
-  margin-top: 24px;
-  font-size: 28px; 
-  width: 100%;
-  border: none;
-  outline: none;
-  margin-left: -20px;
-  padding: 16px 20px;
-  background-color: #f6f8fe;
-  border: 2px solid transparent;
-  font: inherit;
-      line-height: inherit;
-  line-height: 1.6;
-  color: #5c5f6e;
-  border-radius: 2px;
-  transition: all .25s ease-in-out;
-  background-image: url(/assets/img/components/input/placeholder@2x.png);
-  background-size: 20px 20px;
-  background-position: calc(100% - 20px) 22px;
-  background-repeat: no-repeat;
-}
-
-input[type="submit"] {
- border: 0;
- background-color: #FECC63;
- color: #54434f;
- font-size: 18px;
- font-weight: 700;
- box-shadow: none;
- border-radius: 4px;
- padding: 19px 34px;
- float: right;
- margin-right: -20px;
-} 
-
-
-
- /* Customize the label (the container) */
- .container {
-  float: left;
-  margin-left: -20px;
-  padding-left: 25px;
-  border: 0px;
-  color: white;
-  display: block;
-  position: relative;
-  margin-top: 14px;
-  cursor: pointer;
+.contact {
   font-size: 16px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  margin-top: 12px;
+  font-weight: 300;
+  letter-spacing: -0.2px;
 }
 
-/* Hide the browser's default checkbox */
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+.contact a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  padding-left: 1px;
 }
 
-/* Create a custom checkbox */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 18px;
-  width: 18px;
-  background-color: #f2b7c2;
+@media screen and (max-width: 600px) {
+  .App-logo {
+    height: 225px;
+  }
+  h1 {
+    font-size: 23px;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+  }
+  h2 {
+    font-size: 17px;
+  }
+  .button {
+    font-size: 17px;
+  }
+  .contact {
+    font-size: 14px;
+  }
 }
-
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: #FECC63;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-.container .checkmark:after {
-  left: 6px;
-  top: 2px;
-  width: 5px;
-  height: 10px;
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-} 
