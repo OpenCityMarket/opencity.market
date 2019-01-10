@@ -7,6 +7,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-fullpage": "^0.1.19",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.2",
     "react-typeform-embed": "^0.1.6"
   },
@@ -25,6 +26,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }

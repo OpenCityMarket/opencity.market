@@ -5,12 +5,6 @@ import logoH from './images/ocm-logo-horizontal.svg';
 import './App.css';
 
 
-
-
-
-const originalColors = ['#FBF5F2', '#54434f', '#d72847'];
-
-
 class App extends Component {
   render() {
     return (
