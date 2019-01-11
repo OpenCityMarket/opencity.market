@@ -14,7 +14,7 @@ class App extends Component {
           March 2nd, Populuxe Brewing, 2 to 7pm.
         </h2>  
         <a href="https://opencitymarket.typeform.com/to/u8Jwdi" className="button">
-          Suggest Your Favorite Popups!
+          Suggest Popups for the Market
         </a> 
    
         <div className="contact-container">
@@ -22,7 +22,7 @@ class App extends Component {
             Have a popup shop?
           </div>
           <div className="contact">
-            Contact <a href="mailto:hi@opencity.market">hi@opencity.market</a>.
+            Contact <a href="mailto:hi@opencity.market">hi@opencity.market</a>
           </div>
         </div>
       </div>

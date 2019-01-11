@@ -33,9 +33,6 @@ h1 {
 
 h1 span.em {
   font-weight: 500;
-  font-style: italic;
-  padding-right: 3px;
-  padding-left: -1px;
 }
 
 h2 {
@@ -50,13 +47,13 @@ h2 {
   font-weight: 900;
   box-shadow: none;
   border-radius: 8px;
-  padding: 20px 6px;
+  padding: 23px 6px;
   margin-top: 54px;
   margin-bottom: 44px;
-  letter-spacing: 0.5px;
-  word-spacing: 1px;
+  letter-spacing: -0.5px;
+  word-spacing: 2px;
   display: block;
-  width: 380px;
+  width: 360px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -118,8 +115,9 @@ h2 {
     font-size: 17px;
     margin-top: 44px;
     margin-bottom: 54px;
-    word-spacing: 0;
-    width: 190px;
+    letter-spacing: -1.1px;
+    word-spacing: 2px;
+    width: 280px;
   }
 }
 
