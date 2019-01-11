@@ -13,8 +13,8 @@ class App extends Component {
         <h2>
           March 2nd, Populuxe Brewing, 2 to 7pm.
         </h2>  
-        <a href="https://raincitymarket.typeform.com/to/u8Jwdi" className="button">
-          Cast Your Vote
+        <a href="https://opencitymarket.typeform.com/to/u8Jwdi" className="button">
+          Suggest Your Favorite Popups!
         </a> 
    
         <div className="contact-container">
