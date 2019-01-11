@@ -20,7 +20,8 @@
 .logo {
   /*animation: App-logo-appear 1 0.7s ease-in;*/
   width: 380px;
-  margin-top: 40px;
+  margin-top: 60px;
+  margin-bottom: 0;
 }
 
 h1 {
@@ -29,7 +30,7 @@ h1 {
   font-size: 35px;
   line-height: 45px;
   letter-spacing: 1.4px;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 h1 span.em {
@@ -42,78 +43,62 @@ h1 span.em {
 h2 {
   font-weight: 300; 
   font-size: 22px;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
-.button {
-  border: 0;
-  font-size: 18px;
-  font-weight: 900;
-  box-shadow: none;
-  border-radius: 8px;
-  padding: 20px 6px;
-  margin-top: 54px;
-  margin-bottom: 44px;
-  letter-spacing: 0.5px;
-  word-spacing: 2px;
-  display: block;
-  width: 220px;
-  margin-left: auto;
-  margin-right: auto;
+#share {
+	width: 100%;
+  margin: 20px auto;
   text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-	cursor: pointer;
-  background: none;
-  outline: none;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-  transition: all 0.3s;
-  border: 3px solid #D72847;
-	color: #D72847;
- } 
-
-.button:hover,
-.button:active {
-	color: white;
-	background: #D72847;
 }
 
-.contact-container {
-  margin-top: 75px;
+/* buttons */
+
+#share a {
+	width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin: 8px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #fff;
+	opacity: 0.75;
+	transition: opacity 0.15s linear;
 }
 
-.contact-label {
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: -0.25px;
+#share a:hover {
+	opacity: 1;
 }
 
-.contact {
-  font-size: 13px;
-  margin-top: 4px;
-  font-weight: 300;
-  letter-spacing: -0.1px;
+/* icons */
+
+#share svg {
+  	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
 }
 
-.contact a {
-  color: black;
-  text-decoration: none;
-  font-weight: 500;
-  padding-left: 1px;
+.social {
+  background: #D72847;
 }
+
+/* colors */
+
+
 
 @media screen and (max-width: 600px) {
-  .App-logo {
-    height: 225px;
+  .logo {
+    width: 300px;
+    margin-top: 40px;
   }
   h1 {
-    font-size: 23px;
+    font-size: 28px;
     line-height: 28px;
     letter-spacing: 0.5px;
   }
   h2 {
     font-size: 17px;
+    margin-top: 30px;
   }
   .button {
     font-size: 17px;
@@ -121,6 +106,10 @@ h2 {
     margin-bottom: 54px;
     word-spacing: 0;
     width: 190px;
+  }
+
+  #share a {
+    margin: 5px;
   }
 }
 

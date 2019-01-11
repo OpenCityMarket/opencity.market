@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import logo from './images/ocm-logo.svg';
-import logoH from './images/ocm-logo-horizontal.svg';
 import './App.css';
-
 
 class App extends Component {
   render() {
@@ -22,10 +19,10 @@ class App extends Component {
    
         <div className="contact-container">
           <div className="contact-label">
-            Selling at the Market
+            Have a popup shop?
           </div>
           <div className="contact">
-            Have a popup shop? Contact <a href="mailto:hi@opencity.market">hi@opencity.market</a>.
+            Contact <a href="mailto:hi@opencity.market">hi@opencity.market</a>.
           </div>
         </div>
       </div>
