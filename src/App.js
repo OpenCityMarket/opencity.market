@@ -8,10 +8,10 @@ class App extends Component {
       <div className="App">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>
-          We're hosting a new kind of popup market,<br/>where <span className="em">you</span> decide what shops to feature.
+          We're hosting a new kind of popup market,<br/>where <span className="em">you</span> decide what shops to feature
         </h1>
         <h2>
-          March 2nd, Populuxe Brewing, 2 to 7pm.
+          March 2nd, Populuxe Brewing, 2 to 7pm
         </h2>  
         <a href="https://opencitymarket.typeform.com/to/u8Jwdi" className="button">
           Suggest Popups for the Market
