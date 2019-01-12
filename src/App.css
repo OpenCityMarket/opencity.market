@@ -113,11 +113,14 @@ h2 {
   }
   .button {
     font-size: 17px;
-    margin-top: 44px;
-    margin-bottom: 54px;
+    margin-top: 56px;
+    margin-bottom: 56px;
     letter-spacing: -1.1px;
-    word-spacing: 2px;
-    width: 280px;
+    word-spacing: 1.2px;
+    width: 290px;
+  }
+  .contact-container {
+    margin-top: 50px;
   }
 }
 
