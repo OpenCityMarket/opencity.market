@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logoH from './images/ocm-logo-horizontal.svg';
+import logoH from './images/ocm-logo-horizontal.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram, faSnapchatGhost } from '@fortawesome/free-brands-svg-icons';
 
