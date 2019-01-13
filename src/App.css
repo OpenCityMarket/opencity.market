@@ -110,17 +110,18 @@ h2 {
   }
   h2 {
     font-size: 17px;
+    margin-top: 30px;
   }
   .button {
     font-size: 17px;
-    margin-top: 56px;
-    margin-bottom: 56px;
+    margin-top: 46px;
+    margin-bottom: 46px;
     letter-spacing: -1.1px;
     word-spacing: 1.2px;
     width: 290px;
   }
   .contact-container {
-    margin-top: 50px;
+    margin-top: 55px;
   }
 }
 
