@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
+import queryString from 'query-string';
 import logo from './images/ocm-logo.png';
 import './App.css';
+import { type } from 'os';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    const values = queryString.parse(this.props.location.search);
+    this.typeformUrl = "https://opencitymarket.typeform.com/to/u8Jwdi";
+    if (values.src) {
+      console.log(values.src);
+      this.typeformUrl = this.typeformUrl + "?src=" + values.src;
+    }
+   }
+
   render() {
     return (
       <div className="App">
@@ -13,7 +25,7 @@ class App extends Component {
         <h2>
           March 2nd, Populuxe Brewing, 2 to 7pm
         </h2>  
-        <a href="https://opencitymarket.typeform.com/to/u8Jwdi" className="button">
+        <a href={this.typeformUrl} className="button">
           Suggest Popups for the Market
         </a> 
    
