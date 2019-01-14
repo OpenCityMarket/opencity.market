@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import queryString from 'query-string';
 import logo from './images/ocm-logo.png';
 import './App.css';
-import { type } from 'os';
 
 class App extends Component {
   constructor(props) {
@@ -19,23 +18,12 @@ class App extends Component {
     return (
       <div className="App">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>
-          We're hosting a new kind of popup market,<br/>where <span className="em">you</span> decide what shops to feature
-        </h1>
-        <h2>
-          March 2nd, Populuxe Brewing, 2 to 7pm
-        </h2>  
-        <a href={this.typeformUrl} className="button">
-          Suggest Popups for the Market
-        </a> 
-   
+        <h1>We're hosting a new kind of popup market,<br/>where <span className="em">you</span> decide what shops to feature</h1>
+        <h2>March 2nd, Populuxe Brewing, 12 to 5pm</h2>  
+        <a href={this.typeformUrl} className="button">Suggest Popups for the Market</a> 
         <div className="contact-container">
-          <div className="contact-label">
-            Have a popup shop?
-          </div>
-          <div className="contact">
-            Contact <a href="mailto:hi@opencity.market">hi@opencity.market</a>
-          </div>
+          <div className="contact-label">Have a popup shop?</div>
+          <div className="contact">Contact <a href="mailto:hi@opencity.market">hi@opencity.market</a></div>
         </div>
       </div>
     );
