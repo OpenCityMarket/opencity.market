@@ -22,8 +22,7 @@ class Thanks extends Component {
         <div id="share">
           <a className="social" href="https://www.facebook.com/opencitymkt/" target="blank"><FontAwesomeIcon icon={faFacebookF} /></a>
           <a className="social" href="https://twitter.com/opencitymarket" target="blank"><FontAwesomeIcon icon={faTwitter} /></a>
-          <a className="social" href="https://plus.google.com/share?url={{url}}" target="blank"><FontAwesomeIcon icon={faInstagram} /></a>
-          <a className="social" href="https://www.linkedin.com/shareArticle?mini=true&url={{url}}&title={{title}}&source={{source}}" target="blank"><FontAwesomeIcon icon={faSnapchatGhost} /></a>
+          <a className="social" href="https://instagram.com/opencitymarket" target="blank"><FontAwesomeIcon icon={faInstagram} /></a>
         </div>
 
       </div>
