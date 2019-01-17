@@ -11,11 +11,9 @@ class Thanks extends Component {
       <div className="Thanks">
         <img src={logoH} className="logo" alt="logo" />
         <h1>
-          Stay Up To Date.<br />Follow our Facebook Event!
+          To get updates,<br />follow our Facebook Event!
         </h1>
-
-        <div class="fb-page" data-href="https://www.facebook.com/opencitymkt/" data-tabs="events" data-width="400" data-height="550" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/opencitymkt/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/opencitymkt/">Open City Market</a></blockquote></div>
-
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fopencitymkt%2F%3Feid%3DARAXQjOSlzupVqxusYsVVndgjyFSfshRmzpUYpWdueNnTVAHLCxaGs6TNlaWZCc1T7--xr_twt4uoRF2&tabs=events&width=340&height=350&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=231965911026130" width={340} height={350} style={{border: 'none', overflow: 'hidden'}} scrolling="no" frameBorder={0} allowtransparency="true" allow="encrypted-media" />        
         <div id="share">
           <a className="social" href="https://www.facebook.com/opencitymkt/" target="blank"><FontAwesomeIcon icon={faFacebookF} /></a>
           <a className="social" href="https://twitter.com/opencitymarket" target="blank"><FontAwesomeIcon icon={faTwitter} /></a>

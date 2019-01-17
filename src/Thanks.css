@@ -39,7 +39,7 @@
 
 .Thanks #share {
 	width: 100%;
-  margin: 20px auto;
+  margin: 40px auto;
   text-align: center;
 }
 
@@ -80,15 +80,21 @@
 @media screen and (max-width: 600px) {
   .Thanks .logo {
     width: 300px;
-    margin-top: 15px;
+    margin-top: 10px;
   }
   .Thanks h1 {
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 0.5px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
+  .Thanks #share {
+    margin-top: 30px;
   }
   .Thanks #share a {
-    margin: 5px;
+    margin: 2px 5px;
   }
 }
 
