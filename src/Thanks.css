@@ -27,7 +27,7 @@
   font-family: 'Oswald', sans-serif;
   font-weight: 200;
   font-size: 30px;
-  line-height: 45px;
+  line-height: 38px;
   letter-spacing: 1.4px;
   margin-top: 1px;
   margin-bottom: 30px;
@@ -35,12 +35,6 @@
 
 .Thanks h1 span.em {
   font-weight: 500;
-}
-
-.Thanks h2 {
-  font-weight: 300; 
-  font-size: 22px;
-  margin-top: 50px;
 }
 
 .Thanks #share {
@@ -86,16 +80,12 @@
 @media screen and (max-width: 600px) {
   .Thanks .logo {
     width: 300px;
-    margin-top: 40px;
+    margin-top: 15px;
   }
   .Thanks h1 {
-    font-size: 28px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 24px;
     letter-spacing: 0.5px;
-  }
-  .Thanks h2 {
-    font-size: 17px;
-    margin-top: 50px;
   }
   .Thanks #share a {
     margin: 5px;
