@@ -5,8 +5,6 @@ import { faFacebookF, faTwitter, faInstagram, faSnapchatGhost } from '@fortaweso
 
 import './Thanks.css';
 
-
-
 class Thanks extends Component {
   render() {
     return (
