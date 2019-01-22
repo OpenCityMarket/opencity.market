@@ -66,13 +66,13 @@ h2 {
 	-moz-transition: all 0.3s;
   transition: all 0.3s;
   border: 3px solid #D72847;
-	color: #D72847;
+  color: #D72847;
  } 
 
 .button:hover,
 .button:active {
 	color: white;
-	background: #D72847;
+  background: #D72847;
 }
 
 .contact-container {
