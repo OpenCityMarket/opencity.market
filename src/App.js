@@ -7,10 +7,11 @@ class App extends Component {
   constructor(props) {
     super(props);
     const values = queryString.parse(this.props.location.search);
-    this.typeformUrl = "https://opencitymarket.typeform.com/to/u8Jwdi";
+    this.typeformUrl = "https://opencitymarket.typeform.com/to/ONat9h";
     if (values.src) {
-      console.log(values.src);
       this.typeformUrl = this.typeformUrl + "?src=" + values.src;
+    } else {
+      this.typeformUrl = this.typeformUrl + "?src=web";
     }
    }
 
