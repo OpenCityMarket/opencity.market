@@ -73,9 +73,7 @@ h2 {
 
 .button:hover,
 .button:active {
-	color: white;
-  background: #ff6050;
-  border-color: #ff412e;
+  border-color: #443E5B;
 }
 
 .contact-container {
