@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <div className="App">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>We're hosting a new kind of popup market,<br/>where <span className="em">you</span> decide what shops to feature</h1>
+        <h1>A new popup market in Seattle,<br/>where <span className="em">you</span> decide what shops to feature</h1>
         <h2>March 2nd, Populuxe Brewing, 12 to 5pm</h2>  
         <a href={this.typeformUrl} className="button">Suggest Popups for the Market</a> 
         <div className="contact-container">
