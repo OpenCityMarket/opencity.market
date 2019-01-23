@@ -1,9 +1,8 @@
 /*  OCM BLUE: #19d8d6
+ *  Pinkish Organe: #FF6F61
  *  whitish pink: #FBF5F2
- *  Charcoal: #54434f
- *  dark pinkish red: #D72847
- *  light pinkish red: #efa9b5
- *  yellow: #FECC63
+ *  creamy grey: #D5CFCD
+ *  pink: #C44475
  */
 
 .App {
@@ -65,14 +64,16 @@ h2 {
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
   transition: all 0.3s;
-  border: 3px solid #D72847;
-  color: #D72847;
+  border: 3px solid #ff6f61;
+  color: white;
+  background: #ff6f61;
  } 
 
 .button:hover,
 .button:active {
 	color: white;
-  background: #D72847;
+  background: #ff6050;
+  border-color: #ff412e;
 }
 
 .contact-container {
