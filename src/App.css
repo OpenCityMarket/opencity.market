@@ -100,6 +100,14 @@ h2 {
   padding-left: 1px;
 }
 
+.ant-card-cover img {
+  max-width: 100%;
+}
+
+.btn.btn-active {
+  background: #19d8d6;
+}
+
 @media screen and (max-width: 600px) {
   .App-logo {
     height: 240px;
