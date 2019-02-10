@@ -3,7 +3,9 @@ import StackGrid, { transitions, easings } from "react-stack-grid";
 import sizeMe from 'react-sizeme';
 import { Card } from 'antd';
 import queryString from 'query-string';
-import logo from './images/ocm-logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import logo from './images/ocm-logo-horizontal.png';
 
 import v1_1 from './images/vendors/v1_1.jpg';
 import v1_2 from './images/vendors/v1_2.jpg';
@@ -46,8 +48,10 @@ import './App.css';
 
 const transition = transitions.scaleDown;
 
-const renderCard = ({key, title, description, img}) => (
+const renderCard = ({key, vendor, description, img}) => (
   <Card key={key} hoverable style={{}} cover={ <img alt="" src={img} /> }>
+    <div className="name">{vendor}</div>
+    <div className="description">{description}</div>
   </Card>
 )
 
@@ -60,41 +64,41 @@ const shuffle = function(a) {
 }
 
 let images = [
-  { key: 'v1_1', img: v1_1, vendor: 'Raised Doughnuts' },
-  { key: 'v1_2', img: v1_2, vendor: 'Raised Doughnuts' },
-  { key: 'v1_3', img: v1_3, vendor: 'Raised Doughnuts' },
-  { key: 'v1_4', img: v1_4, vendor: 'Raised Doughnuts' },
-  { key: 'v1_5', img: v1_5, vendor: 'Raised Doughnuts' },
-  { key: 'v2_1', img: v2_1, vendor: 'MODHome Ceramics' },
-  { key: 'v2_2', img: v2_2, vendor: 'MODHome Ceramics' },
-  { key: 'v2_3', img: v2_3, vendor: 'MODHome Ceramics' },
-  { key: 'v2_4', img: v2_4, vendor: 'MODHome Ceramics' },
-  { key: 'v2_5', img: v2_5, vendor: 'MODHome Ceramics' },
-  { key: 'v2_6', img: v2_6, vendor: 'MODHome Ceramics' },
-  { key: 'v2_7', img: v2_7, vendor: 'MODHome Ceramics' },
-  { key: 'v2_8', img: v2_8, vendor: 'MODHome Ceramics' },
-  { key: 'v3_1', img: v3_1, vendor: 'Henna Art by Antoinette' },
-  { key: 'v3_2', img: v3_2, vendor: 'Henna Art by Antoinette' },
-  { key: 'v3_3', img: v3_3, vendor: 'Henna Art by Antoinette' },
-  { key: 'v3_4', img: v3_4, vendor: 'Henna Art by Antoinette' },
-  { key: 'v3_5', img: v3_5, vendor: 'Henna Art by Antoinette' },
-  { key: 'v4_1', img: v4_1, vendor: 'Frelard Tamales' },
-  { key: 'v4_2', img: v4_2, vendor: 'Frelard Tamales' },
-  { key: 'v4_3', img: v4_3, vendor: 'Frelard Tamales' },
-  { key: 'v4_4', img: v4_4, vendor: 'Frelard Tamales' },
-  { key: 'v4_5', img: v4_5, vendor: 'Frelard Tamales' },
-  { key: 'v4_6', img: v4_6, vendor: 'Frelard Tamales' },
-  { key: 'v4_7', img: v4_7, vendor: 'Frelard Tamales' },
-  { key: 'v5_1', img: v5_1, vendor: 'Peasant Food Manifesto' },
-  { key: 'v5_2', img: v5_2, vendor: 'Peasant Food Manifesto' },
-  { key: 'v5_3', img: v5_3, vendor: 'Peasant Food Manifesto' },
-  { key: 'v5_4', img: v5_4, vendor: 'Peasant Food Manifesto' },
-  { key: 'h_1', img: h_1, vendor: 'Populuxe Brewing' },
-  { key: 'h_2', img: h_2, vendor: 'Populuxe Brewing' },
-  { key: 'h_3', img: h_3, vendor: 'Populuxe Brewing' },
-  { key: 'h_4', img: h_4, vendor: 'Populuxe Brewing' },
-  { key: 'h_5', img: h_5, vendor: 'Populuxe Brewing' },
-  { key: 'h_6', img: h_6, vendor: 'Populuxe Brewing' },
+  { key: 'v1_1', img: v1_1, vendor: 'Raised Doughnuts', description: 'Elevated fried confections' },
+  { key: 'v1_2', img: v1_2, vendor: 'Raised Doughnuts', description: 'Elevated fried confections'},
+  { key: 'v1_3', img: v1_3, vendor: 'Raised Doughnuts', description: 'Elevated fried confections' },
+  { key: 'v1_4', img: v1_4, vendor: 'Raised Doughnuts', description: 'Elevated fried confections' },
+  { key: 'v1_5', img: v1_5, vendor: 'Raised Doughnuts', description: 'Elevated fried confections' },
+  { key: 'v2_1', img: v2_1, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works' },
+  { key: 'v2_2', img: v2_2, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works' },
+  { key: 'v2_3', img: v2_3, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works' },
+  { key: 'v2_4', img: v2_4, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works' },
+  { key: 'v2_5', img: v2_5, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works' },
+  { key: 'v2_6', img: v2_6, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works' },
+  { key: 'v2_7', img: v2_7, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works' },
+  { key: 'v2_8', img: v2_8, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works' },
+  { key: 'v3_1', img: v3_1, vendor: 'Magic Magpie Studio', description: 'Henna Art by Antoinette' },
+  { key: 'v3_2', img: v3_2, vendor: 'Magic Magpie Studio', description: 'Henna Art by Antoinette' },
+  { key: 'v3_3', img: v3_3, vendor: 'Magic Magpie Studio', description: 'Henna Art by Antoinette' },
+  { key: 'v3_4', img: v3_4, vendor: 'Magic Magpie Studio', description: 'Henna Art by Antoinette' },
+  { key: 'v3_5', img: v3_5, vendor: 'Magic Magpie Studio', description: 'Henna Art by Antoinette' },
+  { key: 'v4_1', img: v4_1, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options' },
+  { key: 'v4_2', img: v4_2, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options' },
+  { key: 'v4_3', img: v4_3, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options' },
+  { key: 'v4_4', img: v4_4, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options' },
+  { key: 'v4_5', img: v4_5, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options' },
+  { key: 'v4_6', img: v4_6, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options' },
+  { key: 'v4_7', img: v4_7, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options' },
+  { key: 'v5_1', img: v5_1, vendor: 'Peasant Food Manifesto', description: 'Korean-inspired street food fusions' },
+  { key: 'v5_2', img: v5_2, vendor: 'Peasant Food Manifesto', description: 'Korean-inspired street food fusions' },
+  { key: 'v5_3', img: v5_3, vendor: 'Peasant Food Manifesto', description: 'Korean-inspired street food fusions' },
+  { key: 'v5_4', img: v5_4, vendor: 'Peasant Food Manifesto', description: 'Korean-inspired street food fusions' },
+  { key: 'h_1', img: h_1, vendor: 'Populuxe Brewing', description: 'Well behaved kids and dogs welcome' },
+  { key: 'h_2', img: h_2, vendor: 'Populuxe Brewing', description: 'Well behaved kids and dogs welcome' },
+  { key: 'h_3', img: h_3, vendor: 'Populuxe Brewing', description: 'Well behaved kids and dogs welcome' },
+  { key: 'h_4', img: h_4, vendor: 'Populuxe Brewing', description: 'Well behaved kids and dogs welcome' },
+  { key: 'h_5', img: h_5, vendor: 'Populuxe Brewing', description: 'Well behaved kids and dogs welcome' },
+  { key: 'h_6', img: h_6, vendor: 'Populuxe Brewing', description: 'Well behaved kids and dogs welcome' },
 ];
 
 images = shuffle(images);
@@ -110,8 +114,6 @@ class App extends Component {
     this.state = {
       activeButton: 'All',  
     };
-    this.onButtonClick = this.onButtonClick.bind(this);
-    this.filterBySelection = this.filterBySelection.bind(this);
 
     if (values.src) {
       this.typeformUrl = this.typeformUrl + '?src=' + values.src;
@@ -120,60 +122,61 @@ class App extends Component {
     }
    }
 
-  onButtonClick(name){
-    this.setState({
-      activeButton: name
-    })
-  }
-
-  filterBySelection(item) {
-    if (this.state.activeButton === "All" || 
-        this.state.activeButton === item.vendor) {
-      return true;
-    }
-    return false;
-  }
-
   render() {
-    console.log(this.state.activeButton)
-
     const { width, height } = this.props.size
-    const buttons = buttonNames.map(d => 
-      <button id={d} onClick={this.onButtonClick.bind(this, d)} className={this.state.activeButton === d ? "btn btn-active" : "btn"}>{d}</button>
-    )
-
     return (
       <div className="App">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>A new popup market in Seattle,<br/>where <span className="em">you</span> decide what shops to feature</h1>
-        <h2>March 2nd, Populuxe Brewing, 12 to 5pm</h2>  
-        <a href={this.eventUrl} className="button">Get on the Guest List!</a> 
 
-        <div>
-          {buttons}
+        <div className="section section-one">
+          <img src={logo} className="App-logo" alt="logo" />
+          {/*
+            <h1>A new popup market in Seattle,<br/>where <span className="em">you</span> decide what shops to feature</h1>
+          */}
+          <h1>A Popup Market of Local Shops<br/>Curated by the Community</h1>
+          <h2>Populuxe Brewing, Seattle<br/>March 2nd, 12 to 5pm</h2>
+
+          <a className="button" href={this.eventUrl}>Get on the Guest List!</a> 
+
         </div>
 
-        <StackGrid
-          monitorImagesLoaded
-          columnWidth={200}          
-          duration={600}
-          gutterWidth={17}
-          gutterHeight={17}
-          easing={easings.cubicOut}
-          appearDelay={60}
-          appear={transition.appear}
-          appeared={transition.appeared}
-          enter={transition.enter}
-          entered={transition.entered}
-          leaved={transition.leaved}
-        >
-          { images.filter(this.filterBySelection).map(renderCard) }
-        </StackGrid>
+        <div className="section section-two">
+          <h3>Meet our Popup Shops</h3>
+          <p>
+            We asked over 600 Seattleites<br/>
+            about their favorite popups shops.<br/>
+            <div>Here's who we chose.</div>
+          </p>
 
-        <div className="contact-container">
-          <div className="contact-label">Have a popup shop?</div>
-          <div className="contact">Contact <a href="mailto:hi@opencity.market">hi@opencity.market</a></div>
+          <StackGrid
+            monitorImagesLoaded
+            columnWidth={ 250 }          
+            duration={600}
+            gutterWidth={24}
+            gutterHeight={24}
+            easing={easings.cubicOut}
+            appearDelay={60}
+            appear={transition.appear}
+            appeared={transition.appeared}
+            enter={transition.enter}
+            entered={transition.entered}
+            leaved={transition.leaved}
+          >
+            { images.map(renderCard) }
+          </StackGrid>
         </div>
+
+        <div className="section section-three">
+          <div className="contact-container">
+            <div className="contact-label">Contact Us</div>
+            <div className="contact"><a href="mailto:hi@opencity.market">hi@opencity.market</a></div>
+          </div>
+          <div id="share">
+            <a className="social" href="https://www.facebook.com/opencitymkt/" target="blank"><FontAwesomeIcon icon={faFacebookF} /></a>
+            <a className="social" href="https://instagram.com/opencitymarket" target="blank"><FontAwesomeIcon icon={faInstagram} /></a>
+            <a className="social" href="https://twitter.com/opencitymarket" target="blank"><FontAwesomeIcon icon={faTwitter} /></a>
+          </div>
+        </div>
+
       </div>
     );
   }

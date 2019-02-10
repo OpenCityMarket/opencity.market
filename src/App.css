@@ -17,46 +17,91 @@
   right: 0;
 }
 
+.section {
+  padding: 50px;
+}
+
+.section-one {
+  background-color: #C44475;
+}
+
+.section-two {
+  background-color: #FBF5F2;
+}
+
+.section-three {
+  background-color: #443E5B;
+}
+
 .App-logo {
   /*animation: App-logo-appear 1 0.7s ease-in;*/
-  height: 290px;
-  margin-top: 30px;
+  width: 420px;
+  margin: 0;
+  padding: 0;
 }
+
 
 h1 {
   font-family: 'Oswald', sans-serif;
   font-weight: 200;
-  font-size: 35px;
-  line-height: 45px;
-  letter-spacing: 1.4px;
-  margin-top: 8px;
-}
-
-h1 span.em {
-  font-weight: 500;
+  font-size: 30px;
+  line-height: 42px;
+  letter-spacing: -0.5px;
+  color: #FBF5F2;
+  margin: 0;
+  padding: 0;
 }
 
 h2 {
+  color: #FBF5F2;
   font-weight: 300; 
-  font-size: 22px;
-  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.25px;
+  margin: 0;
+  padding: 35px 0 35px 0;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 23px;
+  font-weight: 500;
+  letter-spacing: -0.25px;
+  color: black;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 23px;
+  width: 400px;
+  color: black;
+  width: 100%;
+  padding: 0 0 50px 0;
+  text-align: center;
+}
+
+p div {
+  margin-top: 16px;
 }
 
 .button {
   border: 0;
-  font-size: 22px;
-  font-weight: 900;
+  font-size: 20px;
+  font-weight: 700;
   box-shadow: none;
   border-radius: 8px;
-  padding: 22px 6px;
-  margin-top: 50px;
-  margin-bottom: 44px;
-  letter-spacing: -0.75px;
+  padding: 0 6px;
+  height: 58px;
+  line-height: 58px;
+  letter-spacing: -0.5px;
   word-spacing: 2px;
   display: block;
   width: 240px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 30px auto 0 auto;
   text-align: center;
   text-decoration: none;
   text-transform: none;
@@ -66,9 +111,9 @@ h2 {
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
   transition: all 0.3s;
-  border: 3px solid #ff6f61;
+  border: 3px solid #19d8d6;
   color: white;
-  background: #ff6f61;
+  background: #19d8d6;
  } 
 
 .button:hover,
@@ -77,13 +122,14 @@ h2 {
 }
 
 .contact-container {
-  margin-top: 75px;
+  margin: 30px 0;
 }
 
 .contact-label {
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: -0.25px;
+  color: white;
 }
 
 .contact {
@@ -91,10 +137,11 @@ h2 {
   margin-top: 4px;
   font-weight: 300;
   letter-spacing: -0.1px;
+  color: white;
 }
 
 .contact a {
-  color: black;
+  color: white;
   text-decoration: none;
   font-weight: 300;
   padding-left: 1px;
@@ -104,59 +151,119 @@ h2 {
   max-width: 100%;
 }
 
-.btn.btn-active {
-  background: #19d8d6;
+.ant-card {
+  background: white;
+  border: solid 1px #443E5B;
 }
 
-@media screen and (max-width: 600px) {
+.ant-card-body {
+  padding-bottom: 16px;
+}
+
+.ant-card-body .name {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.ant-card-body .description {
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+#share {
+  margin: 20px 0 50px 0;
+}
+
+#share a {
+	width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin: 8px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  background: #847ba5;
+	opacity: 0.75;
+	transition: opacity 0.15s linear;
+}
+
+#share a:hover {
+	opacity: 1;
+}
+
+/* icons */
+
+#share svg {
+  	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 40px;
+  }
   .App-logo {
-    height: 240px;
+    width: 310px;
   }
   h1 {
     font-size: 26px;
-    line-height: 30px;
-    letter-spacing: 0.25px;
-    margin-top: 12px;
+    line-height: 36px;
+    letter-spacing: -0.25px;
+    margin: 0;
+    padding: 0;
   }
   h2 {
     font-size: 18px;
-    margin-top: 38px;
+    margin: 0;
+    padding: 25px 0 25px 0;
+  }
+  h3 {
+    line-height: 20px;
+    padding: 0 0 6px 0;
+  }
+  p {
+    margin: 0;
+    padding-bottom: 40px;
   }
   .button {
-    font-size: 19px;
-    margin-top: 50px;
+    font-size: 18px;
+    margin-top: 20px;
     letter-spacing: -1.1px;
     word-spacing: 1.2px;
-    width: 190px;
-    padding-top: 19px;
-    padding-bottom: 19px;
-  }
-  .contact-container {
-    margin-top: 70px;
+    width: 200px;
+    padding: 0 6px;
+    height: 46px;
+    line-height: 46px;
   }
 }
 
-@media screen and (max-width: 370px) {
+@media (max-width: 370px) {
+  .section {
+    padding: 30px;
+  }
   .App-logo {
-    height: 190px;
+    width: 250px;
   }
   h1 {
     font-size: 22px;
-    line-height: 26px;
+    line-height: 28px;
     letter-spacing: 0.25px;
   }
   h2 {
     font-size: 16px;
-    margin-top: 30px;
   }
+  p {
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 16px;
+  }  
   .button {
     font-size: 18px;
-    margin-top: 44px;
+    margin-top: 20px;
     letter-spacing: -1.1px;
     word-spacing: 1.2px;
-    width: 180px;
-    padding-top: 14px;
-    padding-bottom: 14px;
   }
   .contact-container {
     margin-top: 40px;
