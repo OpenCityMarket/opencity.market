@@ -43,16 +43,21 @@ import h_4 from './images/vendors/h_4.jpg';
 import h_5 from './images/vendors/h_5.jpg';
 import h_6 from './images/vendors/h_6.jpg';
 
-
 import './App.css';
 
 const transition = transitions.scaleDown;
 
-const renderCard = ({key, vendor, description, img}) => (
-  <Card key={key} hoverable style={{}} cover={ <img alt="" src={img} /> }>
-    <div className="name">{vendor}</div>
-    <div className="description">{description}</div>
-  </Card>
+const { Meta } = Card;
+
+const renderCard = ({key, vendor, description, url, img}) => (
+  <a href={url} className="card" target="_blank" rel="noopener noreferrer">
+    <Card key={key} style={{}} cover={ <img alt="" src={img} /> }>
+      <Meta
+      title={vendor}
+      description={description}
+      />
+    </Card>
+  </a>
 )
 
 const shuffle = function(a) {
@@ -64,41 +69,41 @@ const shuffle = function(a) {
 }
 
 let images = [
-  { key: 'v1_1', img: v1_1, vendor: 'Raised Doughnuts', description: 'Elevated fried confections' },
-  { key: 'v1_2', img: v1_2, vendor: 'Raised Doughnuts', description: 'Elevated fried confections'},
-  { key: 'v1_3', img: v1_3, vendor: 'Raised Doughnuts', description: 'Elevated fried confections' },
-  { key: 'v1_4', img: v1_4, vendor: 'Raised Doughnuts', description: 'Elevated fried confections' },
-  { key: 'v1_5', img: v1_5, vendor: 'Raised Doughnuts', description: 'Elevated fried confections' },
-  { key: 'v2_1', img: v2_1, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works' },
-  { key: 'v2_2', img: v2_2, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works' },
-  { key: 'v2_3', img: v2_3, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works' },
-  { key: 'v2_4', img: v2_4, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works' },
-  { key: 'v2_5', img: v2_5, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works' },
-  { key: 'v2_6', img: v2_6, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works' },
-  { key: 'v2_7', img: v2_7, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works' },
-  { key: 'v2_8', img: v2_8, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works' },
-  { key: 'v3_1', img: v3_1, vendor: 'Magic Magpie Studio', description: 'Henna Art by Antoinette' },
-  { key: 'v3_2', img: v3_2, vendor: 'Magic Magpie Studio', description: 'Henna Art by Antoinette' },
-  { key: 'v3_3', img: v3_3, vendor: 'Magic Magpie Studio', description: 'Henna Art by Antoinette' },
-  { key: 'v3_4', img: v3_4, vendor: 'Magic Magpie Studio', description: 'Henna Art by Antoinette' },
-  { key: 'v3_5', img: v3_5, vendor: 'Magic Magpie Studio', description: 'Henna Art by Antoinette' },
-  { key: 'v4_1', img: v4_1, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options' },
-  { key: 'v4_2', img: v4_2, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options' },
-  { key: 'v4_3', img: v4_3, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options' },
-  { key: 'v4_4', img: v4_4, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options' },
-  { key: 'v4_5', img: v4_5, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options' },
-  { key: 'v4_6', img: v4_6, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options' },
-  { key: 'v4_7', img: v4_7, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options' },
-  { key: 'v5_1', img: v5_1, vendor: 'Peasant Food Manifesto', description: 'Korean-inspired street food fusions' },
-  { key: 'v5_2', img: v5_2, vendor: 'Peasant Food Manifesto', description: 'Korean-inspired street food fusions' },
-  { key: 'v5_3', img: v5_3, vendor: 'Peasant Food Manifesto', description: 'Korean-inspired street food fusions' },
-  { key: 'v5_4', img: v5_4, vendor: 'Peasant Food Manifesto', description: 'Korean-inspired street food fusions' },
-  { key: 'h_1', img: h_1, vendor: 'Populuxe Brewing', description: 'Well behaved kids and dogs welcome' },
-  { key: 'h_2', img: h_2, vendor: 'Populuxe Brewing', description: 'Well behaved kids and dogs welcome' },
-  { key: 'h_3', img: h_3, vendor: 'Populuxe Brewing', description: 'Well behaved kids and dogs welcome' },
-  { key: 'h_4', img: h_4, vendor: 'Populuxe Brewing', description: 'Well behaved kids and dogs welcome' },
-  { key: 'h_5', img: h_5, vendor: 'Populuxe Brewing', description: 'Well behaved kids and dogs welcome' },
-  { key: 'h_6', img: h_6, vendor: 'Populuxe Brewing', description: 'Well behaved kids and dogs welcome' },
+  { key: 'v1_1', img: v1_1, vendor: 'Raised Doughnuts', description: 'Elevated fried confections', url: 'https://www.raiseddoughnuts.com/'},
+  { key: 'v1_2', img: v1_2, vendor: 'Raised Doughnuts', description: 'Elevated fried confections', url: 'https://www.raiseddoughnuts.com/'},
+  { key: 'v1_3', img: v1_3, vendor: 'Raised Doughnuts', description: 'Elevated fried confections', url: 'https://www.raiseddoughnuts.com/' },
+  { key: 'v1_4', img: v1_4, vendor: 'Raised Doughnuts', description: 'Elevated fried confections', url: 'https://www.raiseddoughnuts.com/' },
+  { key: 'v1_5', img: v1_5, vendor: 'Raised Doughnuts', description: 'Elevated fried confections', url: 'https://www.raiseddoughnuts.com/' },
+  { key: 'v2_1', img: v2_1, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works', url: 'https://www.modhomeceramics.com/' },
+  { key: 'v2_2', img: v2_2, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works', url: 'https://www.modhomeceramics.com/' },
+  { key: 'v2_3', img: v2_3, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works', url: 'https://www.modhomeceramics.com/' },
+  { key: 'v2_4', img: v2_4, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works', url: 'https://www.modhomeceramics.com/' },
+  { key: 'v2_5', img: v2_5, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works', url: 'https://www.modhomeceramics.com/' },
+  { key: 'v2_6', img: v2_6, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works', url: 'https://www.modhomeceramics.com/' },
+  { key: 'v2_7', img: v2_7, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works', url: 'https://www.modhomeceramics.com/' },
+  { key: 'v2_8', img: v2_8, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works', url: 'https://www.modhomeceramics.com/' },
+  { key: 'v3_1', img: v3_1, vendor: 'Magic Magpie Studio', description: 'Henna Art by Antoinette', url: 'http://antoin.net/' },
+  { key: 'v3_2', img: v3_2, vendor: 'Magic Magpie Studio', description: 'Henna Art by Antoinette', url: 'http://antoin.net/' },
+  { key: 'v3_3', img: v3_3, vendor: 'Magic Magpie Studio', description: 'Henna Art by Antoinette', url: 'http://antoin.net/' },
+  { key: 'v3_4', img: v3_4, vendor: 'Magic Magpie Studio', description: 'Henna Art by Antoinette', url: 'http://antoin.net/' },
+  { key: 'v3_5', img: v3_5, vendor: 'Magic Magpie Studio', description: 'Henna Art by Antoinette', url: 'http://antoin.net/' },
+  { key: 'v4_1', img: v4_1, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options', url: 'http://www.frelardtamales.com/' },
+  { key: 'v4_2', img: v4_2, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options', url: 'http://www.frelardtamales.com/' },
+  { key: 'v4_3', img: v4_3, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options', url: 'http://www.frelardtamales.com/' },
+  { key: 'v4_4', img: v4_4, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options', url: 'http://www.frelardtamales.com/' },
+  { key: 'v4_5', img: v4_5, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options', url: 'http://www.frelardtamales.com/' },
+  { key: 'v4_6', img: v4_6, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options', url: 'http://www.frelardtamales.com/' },
+  { key: 'v4_7', img: v4_7, vendor: 'Frelard Tamales', description: 'Authentic tamales, vegan-friendly options', url: 'http://www.frelardtamales.com/' },
+  { key: 'v5_1', img: v5_1, vendor: 'Peasant Food Manifesto', description: 'Korean-inspired street food fusions', url: 'http://www.peasantfoodmanifesto.com/' },
+  { key: 'v5_2', img: v5_2, vendor: 'Peasant Food Manifesto', description: 'Korean-inspired street food fusions', url: 'http://www.peasantfoodmanifesto.com/' },
+  { key: 'v5_3', img: v5_3, vendor: 'Peasant Food Manifesto', description: 'Korean-inspired street food fusions', url: 'http://www.peasantfoodmanifesto.com/' },
+  { key: 'v5_4', img: v5_4, vendor: 'Peasant Food Manifesto', description: 'Korean-inspired street food fusions', url: 'http://www.peasantfoodmanifesto.com/' },
+  { key: 'h_1', img: h_1, vendor: 'Populuxe Brewing', description: 'Well behaved kids and dogs welcome', url: 'https://www.populuxebrewing.com/' },
+  { key: 'h_2', img: h_2, vendor: 'Populuxe Brewing', description: 'Well behaved kids and dogs welcome', url: 'https://www.populuxebrewing.com/' },
+  { key: 'h_3', img: h_3, vendor: 'Populuxe Brewing', description: 'Well behaved kids and dogs welcome', url: 'https://www.populuxebrewing.com/' },
+  { key: 'h_4', img: h_4, vendor: 'Populuxe Brewing', description: 'Well behaved kids and dogs welcome', url: 'https://www.populuxebrewing.com/' },
+  { key: 'h_5', img: h_5, vendor: 'Populuxe Brewing', description: 'Well behaved kids and dogs welcome', url: 'https://www.populuxebrewing.com/' },
+  { key: 'h_6', img: h_6, vendor: 'Populuxe Brewing', description: 'Well behaved kids and dogs welcome', url: 'https://www.populuxebrewing.com/' },
 ];
 
 images = shuffle(images);

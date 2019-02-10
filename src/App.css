@@ -156,19 +156,29 @@ p div {
   border: solid 1px #443E5B;
 }
 
+.ant-card:hover {
+  border-color: #C44475;
+  box-shadow: 0px 0px 6px #C44475;
+}
+
 .ant-card-body {
   padding-bottom: 16px;
 }
 
-.ant-card-body .name {
+.ant-card-meta-title {
   font-size: 14px;
   margin-top: 8px;
 }
 
-.ant-card-body .description {
+.ant-card-meta-description {
   font-weight: 300;
   font-size: 14px;
   margin-top: 4px;
+}
+
+a.card {
+  text-decoration: none;
+  color: black;
 }
 
 #share {
