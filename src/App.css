@@ -156,8 +156,8 @@ p {
 }
 
 .ant-card:hover, .ant-card:active {
-  border-color: #19d8d6;
-  box-shadow: 0px 0px 4px 3px #19d8d6;
+  border-color: #C44475;
+  box-shadow: 0px 0px 4px 3px #C44475;
 }
 
 .ant-card-body {
