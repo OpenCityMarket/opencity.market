@@ -30,7 +30,7 @@
 }
 
 .section-three {
-  background-color: #C44475;
+  background-color: #443E5B;
 }
 
 .App-logo {
@@ -156,8 +156,8 @@ p {
 }
 
 .ant-card:hover, .ant-card:active {
-  border-color: #C44475;
-  box-shadow: 0px 0px 6px #C44475;
+  border-color: #19d8d6;
+  box-shadow: 0px 0px 4px 3px #19d8d6;
 }
 
 .ant-card-body {
@@ -192,8 +192,8 @@ a.card {
   border-radius: 50%;
   font-size: 22px;
   color: #fff;
-  background: #af3765;
-	opacity: 0.85;
+  background: #C44475;
+	opacity: 0.75;
 	transition: opacity 0.15s linear;
 }
 
