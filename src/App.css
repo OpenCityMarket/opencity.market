@@ -158,13 +158,12 @@ p {
   border-radius: 50%;
   font-size: 22px;
   color: #fff;
-  background: #C44475;
-	opacity: 0.75;
-	transition: opacity 0.15s linear;
+  background: rgba(196,68,117, 0.6);
+	transition: background 0.15s linear;
 }
 
 #share a:hover {
-	opacity: 1;
+  background: rgba(196,68,117, 1);
 }
 
 /* icons */
