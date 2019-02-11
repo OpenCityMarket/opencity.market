@@ -22,7 +22,7 @@
 }
 
 .section-one {
-  background-color: #C44475;
+  background-color: #443E5B;
 }
 
 .section-two {
@@ -30,7 +30,7 @@
 }
 
 .section-three {
-  background-color: #443E5B;
+  background-color: #C44475;
 }
 
 .App-logo {
@@ -44,12 +44,12 @@
 h1 {
   font-family: 'Oswald', sans-serif;
   font-weight: 200;
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 34px;
+  line-height: 44px;
   letter-spacing: -0.5px;
   color: #FBF5F2;
   margin: 0;
-  padding: 0;
+  padding: 6px 0 0 0;
 }
 
 h2 {
@@ -88,7 +88,6 @@ p {
   width: 500px;
 }
 
-
 .button {
   border: 0;
   font-size: 20px;
@@ -102,7 +101,7 @@ p {
   word-spacing: 2px;
   display: block;
   width: 240px;
-  margin: 30px auto 0 auto;
+  margin: 20px auto 0 auto;
   text-align: center;
   text-decoration: none;
   text-transform: none;
@@ -113,12 +112,12 @@ p {
 	-moz-transition: all 0.3s;
   transition: all 0.3s;
   color: white;
-  background: #19d8d6;
+  background: #C44475;
  } 
 
 .button:hover,
 .button:active {
-  background: #15bab8;
+  background: #a2335e;
 }
 
 .contact-container {
@@ -127,13 +126,13 @@ p {
 
 .contact-label {
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: -0.25px;
   color: white;
 }
 
 .contact {
-  font-size: 14px;
+  font-size: 17px;
   margin-top: 4px;
   font-weight: 300;
   letter-spacing: -0.1px;
@@ -186,15 +185,15 @@ a.card {
 }
 
 #share a {
-	width: 50px;
-  height: 50px;
+	width: 55px;
+  height: 55px;
   display: inline-block;
   margin: 8px;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 22px;
   color: #fff;
-  background: #847ba5;
-	opacity: 0.75;
+  background: #af3765;
+	opacity: 0.85;
 	transition: opacity 0.15s linear;
 }
 
