@@ -79,8 +79,6 @@ let images = [
   { key: 'v6_1', img: v6_1, vendor: 'Blue Highway Games', description: 'Cards and board games available for you to play and buy', url: 'http://www.bluehighwaygames.com' },
 ];
 
-var buttonNames = ["All", "Populuxe Brewing", "Raised Doughnuts", "MODHome Ceramics", "Henna Art by Antoinette", "Frelard Tamales", "Peasant Food Manifesto"]
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -108,7 +106,7 @@ class App extends Component {
           <h1>A Popup Market of Local Shops<br/>Curated by the Community</h1>
           <h2>Populuxe Brewing, Seattle<br/>March 2nd, 12 to 5pm</h2>
 
-          <a className="button" href={this.eventUrl} target="_blank" rel="noopener noreferrer">Get on the Guest List!</a> 
+          <a className="button" href={this.eventUrl} target="_blank" rel="noopener noreferrer">Get on the Guest List</a> 
 
         </div>
 
