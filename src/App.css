@@ -18,7 +18,7 @@
 }
 
 .section {
-  padding: 50px;
+  padding: 50px 20px;
 }
 
 .section-one {
@@ -45,7 +45,7 @@ h1 {
   font-family: 'Oswald', sans-serif;
   font-weight: 200;
   font-size: 30px;
-  line-height: 42px;
+  line-height: 40px;
   letter-spacing: -0.5px;
   color: #FBF5F2;
   margin: 0;
@@ -70,24 +70,24 @@ h3 {
   letter-spacing: -0.25px;
   color: black;
   margin: 0;
-  padding: 0 0 10px 0;
+  padding: 0;
+  margin-bottom: 8px;
 }
 
 p {
   font-size: 18px;
   font-weight: 300;
-  line-height: 23px;
+  font-size: 18px;
+  line-height: 28px;
   width: 400px;
   color: black;
   width: 100%;
   padding: 0 0 50px 0;
+  margin: 0 auto;
   text-align: center;
+  width: 500px;
 }
 
-p div {
-  margin-top: 16px;
-  font-style: italic;
-}
 
 .button {
   border: 0;
@@ -112,14 +112,13 @@ p div {
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
   transition: all 0.3s;
-  border: 3px solid #19d8d6;
   color: white;
   background: #19d8d6;
  } 
 
 .button:hover,
 .button:active {
-  border-color: #443E5B;
+  background: #15bab8;
 }
 
 .contact-container {
@@ -163,7 +162,7 @@ p div {
 }
 
 .ant-card-body {
-  padding-bottom: 16px;
+  padding: 5px 5px 16px 5px;
 }
 
 .ant-card-meta-title {
@@ -237,6 +236,9 @@ a.card {
   p {
     margin: 0;
     padding-bottom: 40px;
+    font-size: 14px;
+    line-height: 20px;
+    width: 300px;
   }
   .button {
     font-size: 18px;
@@ -268,7 +270,7 @@ a.card {
   p {
     margin: 0;
     padding-bottom: 20px;
-    font-size: 16px;
+    width: 100%;
   }  
   .button {
     font-size: 18px;
