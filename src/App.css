@@ -118,7 +118,7 @@ p {
 
 .button:hover,
 .button:active {
-  background: rgba(196,68,117,0.7);
+  background: rgba(196,68,117,0.8);
 }
 
 .contact-container {
@@ -164,7 +164,7 @@ p {
 }
 
 #share a:hover {
-  background: rgba(196,68,117,0.7);
+  background: rgba(196,68,117,0.8);
 }
 
 /* icons */
