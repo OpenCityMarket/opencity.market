@@ -112,12 +112,13 @@ p {
 	-moz-transition: all 0.3s;
   transition: all 0.3s;
   color: white;
-  background: #C44475;
+  background: rgba(196,68,117,1);
+  transition: background 0.15s linear;
  } 
 
 .button:hover,
 .button:active {
-  background: #a2335e;
+  background: rgba(196,68,117,0.7);
 }
 
 .contact-container {
@@ -158,12 +159,12 @@ p {
   border-radius: 50%;
   font-size: 22px;
   color: #fff;
-  background: rgba(196,68,117, 0.6);
+  background: rgba(196,68,117,1);
 	transition: background 0.15s linear;
 }
 
 #share a:hover {
-  background: rgba(196,68,117, 1);
+  background: rgba(196,68,117,0.7);
 }
 
 /* icons */
