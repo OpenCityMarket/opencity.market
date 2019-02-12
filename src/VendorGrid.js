@@ -10,6 +10,9 @@ import v4_2 from './images/vendors/v4_2.jpg';
 import v5_4 from './images/vendors/v5_4.jpg';
 import h_5 from './images/vendors/h_5.jpg';
 import v6_1 from './images/vendors/v6_1.jpg';
+import v7_1 from './images/vendors/v7_1.jpg';
+import v8_1 from './images/vendors/v8_1.jpg';
+
 
 import './VendorGrid.css';
 
@@ -36,6 +39,8 @@ let images = [
   { key: 'v4_2', img: v4_2, vendor: 'Frelard Tamales', description: 'Authentic and handmade tamales, with vegan-friendly options', url: 'http://www.frelardtamales.com/' },
   { key: 'v5_4', img: v5_4, vendor: 'Peasant Food Manifesto', description: 'Korean-inspired street food fusions', url: 'http://www.peasantfoodmanifesto.com/' },
   { key: 'v6_1', img: v6_1, vendor: 'Blue Highway Games', description: 'Cards and board games available for you to play and buy', url: 'http://www.bluehighwaygames.com' },
+  { key: 'v7_1', img: v7_1, vendor: 'Holly Haymaker', description: 'Playful ceramic art, jewelry, and adorable animal scultures', url: 'http://www.hollyhaymaker.com' },
+  { key: 'v8_1', img: v8_1, vendor: 'Sage to Sea', description: 'Rugged sacks, pouches, and wallets made from leather and canvas', url: 'http://www.sagetoseadesigns.com' },
 ];
 
 class VendorGrid extends Component {
