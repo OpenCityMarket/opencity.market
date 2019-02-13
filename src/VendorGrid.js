@@ -13,7 +13,7 @@ import v6_1 from './images/vendors/v6_1.jpg';
 import v7_1 from './images/vendors/v7_1.jpg';
 import v8_1 from './images/vendors/v8_1.jpg';
 import v9_1 from './images/vendors/v9_1.jpg';
-
+import v10_1 from './images/vendors/v10_1.jpg';
 
 import './VendorGrid.css';
 
@@ -42,7 +42,8 @@ let images = [
   { key: 'v6_1', img: v6_1, vendor: 'Blue Highway Games', description: 'Cards and board games available for you to play and buy', url: 'http://www.bluehighwaygames.com' },
   { key: 'v7_1', img: v7_1, vendor: 'Holly Haymaker', description: 'Playful ceramic art, jewelry, and adorable animal scultures', url: 'http://www.hollyhaymaker.com' },
   { key: 'v8_1', img: v8_1, vendor: 'Sage to Sea', description: 'Rugged sacks, pouches, and wallets made from leather and canvas', url: 'http://www.sagetoseadesigns.com' },
-  { key: 'v9_1', img: v9_1, vendor: 'Bear Billy Fine Metals', description: 'Architecturally fabricated metal jewelry inspired by nature ', url: 'http://bearbilly.com/' },
+  { key: 'v9_1', img: v9_1, vendor: 'Bear Billy Fine Metals', description: 'Architecturally fabricated metal jewelry inspired by nature', url: 'http://bearbilly.com/' },
+  { key: 'v10_1', img: v10_1, vendor: 'Bill Levering Woodworking', description: 'Finely crafted woodworking; Figurines, puzzles, magnets, and toys', url: 'https://planx.com/' },
 ];
 
 class VendorGrid extends Component {
