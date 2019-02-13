@@ -43,7 +43,7 @@ let images = [
   { key: 'v7_1', img: v7_1, vendor: 'Holly Haymaker', description: 'Playful ceramic art, jewelry, and adorable animal scultures', url: 'http://www.hollyhaymaker.com' },
   { key: 'v8_1', img: v8_1, vendor: 'Sage to Sea', description: 'Rugged sacks, pouches, and wallets made from leather and canvas', url: 'http://www.sagetoseadesigns.com' },
   { key: 'v9_1', img: v9_1, vendor: 'Bear Billy Fine Metals', description: 'Architecturally fabricated metal jewelry inspired by nature', url: 'http://bearbilly.com/' },
-  { key: 'v10_1', img: v10_1, vendor: 'Bill Levering Woodworking', description: 'Finely crafted woodworking; Figurines, puzzles, magnets, and toys', url: 'https://planx.com/' },
+  { key: 'v10_1', img: v10_1, vendor: 'PlanX Woodworking', description: 'Finely crafted woodworking; Figurines, puzzles, magnets, and toys', url: 'https://planx.com/' },
 ];
 
 class VendorGrid extends Component {
