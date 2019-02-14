@@ -8,8 +8,8 @@ border: solid 1px #443E5B;
 }
 
 .ant-card:hover, .ant-card:active {
-border-color: #C44475;
-box-shadow: 0px 0px 4px 3px #C44475;
+border-color: #D72E81;
+box-shadow: 0px 0px 4px 3px #D72E81;
 }
 
 .ant-card-body {
