@@ -4,6 +4,7 @@
  *  creamy grey: #D5CFCD
  *  peachy grey: #BF9BA4
  *  pink: #C44475
+ *  pink 2: #D72E81
  *  charcoal: #443E5B
  */
 
@@ -113,12 +114,14 @@ p {
   transition: all 0.3s;
   color: white;
   background: rgba(196,68,117,1);
+  background: #D72E81;
   transition: background 0.15s linear;
  } 
 
 .button:hover,
 .button:active {
   background: rgba(196,68,117,0.8);
+  background: rgba(215,46,129, 0.8);
 }
 
 .contact-container {
@@ -160,11 +163,13 @@ p {
   font-size: 22px;
   color: #fff;
   background: rgba(196,68,117,1);
+  background: #D72E81;
 	transition: background 0.15s linear;
 }
 
 #share a:hover {
   background: rgba(196,68,117,0.8);
+  background: rgba(215,46,129, 0.8);
 }
 
 /* icons */
