@@ -44,7 +44,7 @@ const shuffle = function(a) {
 
 let images = [
   { key: 'v11_1', img: v11_1, vendor: 'Ginger Bee Designs', description: 'Hand sketched, laser cut, carefully crafted jewelry', url: 'https://www.etsy.com/shop/GingerBeeDesignsShop' },
-  { key: 'v8_3', img: v8_3, vendor: 'Sage to Sea', description: 'Rugged sacks, pouches, and wallets made from leather and canvas', url: 'http://www.sagetoseadesigns.com' },
+  { key: 'v8_3', img: v8_3, vendor: 'Sage to Sea Designs', description: 'Rugged sacks, pouches, and wallets made from leather and canvas', url: 'http://www.sagetoseadesigns.com' },
   { key: 'v9_1', img: v9_1, vendor: 'Bear Billy Fine Metals', description: 'Architecturally fabricated metal jewelry inspired by nature', url: 'http://bearbilly.com/' },
   { key: 'v10_1', img: v10_1, vendor: 'PlanX Woodworking', description: 'Finely crafted woodworking; Figurines, puzzles, magnets, and toys', url: 'https://planx.com/' },
   { key: 'v3_1', img: v3_1, vendor: 'Magic Magpie Studio', description: 'Henna Art by Antoinette', url: 'http://antoin.net/' },
