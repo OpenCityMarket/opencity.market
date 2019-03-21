@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import queryString from 'query-string';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import PhotoGrid from './PhotoGrid';
 import VendorGrid from './VendorGrid';
 import logo from './images/ocm-logo-horizontal.png';
 
@@ -29,22 +30,22 @@ class App extends Component {
           {/*
             <h1>A new popup market in Seattle,<br/>where <span className="em">you</span> decide what shops to feature</h1>
           */}
-          <h1>A Popup Market of Local Shops<br/>Curated by the Community</h1>
-          <h2>Populuxe Brewing, Seattle<br/>March 2nd, 12 to 5pm</h2>
-          <a className="button" href={this.eventUrl} target="_blank" rel="noopener noreferrer">Get on the Guest List</a> 
+          <h1>Community-Centered Popup Markets</h1>
+          <div className="joinUs">Join us at our next event</div>
+          <h2>Populuxe Brewing, Seattle<br/>April 27<sup>th</sup>, 12 to 5pm</h2>
+          <a className="button" href={this.eventUrl} target="_blank" rel="noopener noreferrer">Become a Vendor</a> 
         </div>
 
         <div className="section section-two">
-          <h3>Meet our Popup Shops</h3>
-          <p>
-            We asked over 600 Seattleites to share their favorite popups.
-            Guided by their answers, we selected the best shops
-            based on availability and space constraints.
-          </p>
-          <VendorGrid />
+          <PhotoGrid />
         </div>
 
         <div className="section section-three">
+          <h3>Past Vendors</h3>
+          <VendorGrid />
+        </div>
+
+        <div className="section section-four">
           <div className="contact-container">
             <div className="contact-label">Contact Us</div>
             <div className="contact"><a href="mailto:hi@opencity.market">hi@opencity.market</a></div>

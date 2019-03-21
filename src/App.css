@@ -27,10 +27,15 @@
 }
 
 .section-two {
-  background-color: #FBF5F2;
+  background-color: #443E5B;
+  padding: 8px 4px;
 }
 
 .section-three {
+  background-color: #FBF5F2;
+}
+
+.section-four {
   background-color: #443E5B;
 }
 
@@ -53,6 +58,17 @@ h1 {
   padding: 6px 0 0 0;
 }
 
+.joinUs {
+  text-transform: uppercase;
+  color: #19d8d6;
+  font-weight: 300; 
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  padding: 0;
+  padding-top: 55px;
+}
+
 h2 {
   color: #FBF5F2;
   font-weight: 300; 
@@ -60,7 +76,7 @@ h2 {
   font-weight: 500;
   letter-spacing: -0.25px;
   margin: 0;
-  padding: 35px 0 35px 0;
+  padding: 10px 0 35px 0;
 }
 
 h3 {
@@ -72,7 +88,7 @@ h3 {
   color: black;
   margin: 0;
   padding: 0;
-  margin-bottom: 8px;
+  margin-bottom: 30px;
 }
 
 p {
@@ -101,8 +117,8 @@ p {
   letter-spacing: -0.5px;
   word-spacing: 2px;
   display: block;
-  width: 240px;
-  margin: 20px auto 0 auto;
+  width: 200px;
+  margin: 30px auto 0px auto;
   text-align: center;
   text-decoration: none;
   text-transform: none;
@@ -197,7 +213,7 @@ p {
   h2 {
     font-size: 18px;
     margin: 0;
-    padding: 25px 0 25px 0;
+    padding: 10px 0 25px 0;
   }
   h3 {
     line-height: 20px;
@@ -215,7 +231,7 @@ p {
     margin-top: 20px;
     letter-spacing: -1.1px;
     word-spacing: 1.2px;
-    width: 200px;
+    width: 180px;
     padding: 0 6px;
     height: 46px;
     line-height: 46px;
