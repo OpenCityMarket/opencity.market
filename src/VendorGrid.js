@@ -57,7 +57,7 @@ let images = [
 images = shuffle(images);
 
 let topImages = [
-  { key: 'h_5', img: h_5, vendor: 'Populuxe Brewing', description: 'Our host and friendly neighborhood brewery; doggos and kiddos welcome', url: 'https://www.populuxebrewing.com/' },
+  /*{ key: 'h_5', img: h_5, vendor: 'Populuxe Brewing', description: 'Our host and friendly neighborhood brewery; doggos and kiddos welcome', url: 'https://www.populuxebrewing.com/' },*/
   { key: 'v12_1', img: v12_1, vendor: 'Irene Akio', description: 'Delightful moments of joy captured in hand-painted greeting cards', url: 'http://www.ireneakio.com/' },
   { key: 'v2_2', img: v2_2, vendor: 'MODHome Ceramics', description: 'Rustic modern clay works', url: 'https://www.modhomeceramics.com/' },  
   { key: 'v7_1', img: v7_1, vendor: 'Holly Haymaker', description: 'Playful ceramic art, jewelry, and adorable animal scultures', url: 'http://www.hollyhaymaker.com' },
