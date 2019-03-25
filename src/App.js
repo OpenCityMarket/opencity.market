@@ -11,7 +11,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     const values = queryString.parse(this.props.location.search);
-    this.typeformUrl = 'https://opencitymarket.typeform.com/to/N4pyHahttps://opencitymarket.typeform.com/to/N4pyHa';
+    this.typeformUrl = 'https://opencitymarket.typeform.com/to/N4pyHa';
     this.eventUrl = '';
 
     if (values.src) {
