@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Redirect } from 'react-router';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import App from './App';
 import Thanks from './Thanks';
 import Privacy from './Privacy';
@@ -14,9 +13,6 @@ ReactDOM.render(
                 <Route exact path="/" component={App} />
                 <Route path="/thanks" component={Thanks} />
                 <Route path="/privacy" component={Privacy} />
-                <Route path="/vote" render={() => (
-                    window.location = 'http://google.com'
-                )} />
             </main>
         </div>    
     </Router>,
