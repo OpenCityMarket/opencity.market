@@ -12,7 +12,7 @@ class App extends Component {
     super(props);
     const values = queryString.parse(this.props.location.search);
     this.typeformUrl = 'https://opencitymarket.typeform.com/to/N4pyHa';
-    this.eventUrl = 'https://www.facebook.com/events/623380038104673/';
+    this.eventUrl = 'https://www.facebook.com/events/446218419271975/';
 
     if (values.src) {
       this.typeformUrl = this.typeformUrl + '?src=' + values.src;
@@ -31,9 +31,11 @@ class App extends Component {
             <h1>A new popup market in Seattle,<br/>where <span className="em">you</span> decide what shops to feature</h1>
           */}
           <h1>Community-Centered Popup Markets</h1>
+          {/*
           <div className="joinUs">Stay tuned for future popups</div>
+          */}
           <a className="button" href={this.typeformUrl} target="_blank" rel="noopener noreferrer">Become a Vendor</a> 
-          <a className="button" href={this.eventUrl} target="_blank" rel="noopener noreferrer">Last event</a> 
+          <a className="button" href={this.eventUrl} target="_blank" rel="noopener noreferrer">Next event</a> 
           {/*
             <a className="button" href={this.typeformUrl} target="_blank" rel="noopener noreferrer">Become a Vendor</a> 
           */}
