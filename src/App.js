@@ -12,7 +12,7 @@ class App extends Component {
     super(props);
     const values = queryString.parse(this.props.location.search);
     this.typeformUrl = 'https://opencitymarket.typeform.com/to/N4pyHa';
-    this.eventUrl = 'https://www.facebook.com/events/446218419271975/';
+    this.eventUrl = 'https://www.facebook.com/events/2467615666859064/';
 
     if (values.src) {
       this.typeformUrl = this.typeformUrl + '?src=' + values.src;
