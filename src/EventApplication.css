@@ -1,0 +1,107 @@
+/*  OCM BLUE: #19d8d6
+ *  whitish pink: #FBF5F2
+ *  Charcoal: #54434f
+ *  dark pinkish red: #D72847
+ *  light pinkish red: #efa9b5
+ *  yellow: #FECC63
+ */
+
+.EventApplication {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: black;
+}
+
+.EventApplication .logo {
+  /*animation: App-logo-appear 1 0.7s ease-in;*/
+  width: 360px;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.EventApplication h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  font-size: 30px;
+  line-height: 38px;
+  letter-spacing: 1.4px;
+  margin-top: 1px;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.EventApplication h1 span.em {
+  font-weight: 500;
+}
+
+.EventApplication h2 {
+  color: black;
+}
+
+.EventApplication #share {
+	width: 100%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* buttons */
+
+.EventApplication #share a {
+	width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin: 8px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #fff;
+	opacity: 0.75;
+	transition: opacity 0.15s linear;
+}
+
+.EventApplication #share a:hover {
+	opacity: 1;
+}
+
+/* icons */
+
+.EventApplication #share svg {
+  	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+.EventApplication .social {
+  background: #D72847;
+}
+
+/* colors */
+
+
+
+@media screen and (max-width: 600px) {
+  .EventApplication .logo {
+    width: 300px;
+    margin-top: 10px;
+  }
+  .EventApplication h1 {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
+  .EventApplication #share {
+    margin-top: 30px;
+  }
+  .EventApplication #share a {
+    margin: 2px 5px;
+  }
+}
+
+
