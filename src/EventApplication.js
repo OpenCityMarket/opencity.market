@@ -17,10 +17,32 @@ class Thanks extends Component {
     this.onToggleChange = this.onToggleChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.state = {
-      applyState: 'Declined',
-      isSubmitted: false
+      applyState: '',
+      isSubmitted: false,
+      vendorName: '',
+      venueName: '',
+      popupDateStr: ''
     };
     console.log(props.match.params.id);
+  }
+
+  componentWillMount() {
+    let that = this;
+    base('Popup Vendors').find(this.props.match.params.id, function(err, record) {
+      if (err) { console.error(err); return; }
+      console.log('Retrieved', record);
+      that.setState({
+        venueName: record.fields['Popup Venue Name'], 
+        vendorName: record.fields['Vendor Business Name'],
+        popupDateStr: record.fields['Popup Easy Date String'],
+      });
+      let status = record.fields['Status'];
+      if (status !== 'Invited') {
+        that.setState({
+          isSubmitted: true
+        });
+      }
+    });
   }
 
   onToggleChange(s) {
@@ -57,11 +79,15 @@ class Thanks extends Component {
     if (this.state.isSubmitted) {
       CollectInput = 
         <div>
-          <p>Thanks, we got your response! We'll be in touch in a couple days.</p>
+          <h2>Thanks, we got your response!</h2> 
+          <p>We'll be in touch in a couple days.</p>
         </div>
     } else {
       CollectInput = 
         <div>
+          <h2>
+            Would you like to apply to be a vendor?
+          </h2>
           <ButtonToolbar className="chart-controls justify-content-md-center">
             <ToggleButtonGroup type="radio" name="Apply" value={this.state.applyState} onChange={this.onToggleChange}>
                     <ToggleButton value="Applied" type="radio" variant="light">Yes, I'd like to apply</ToggleButton>
@@ -80,14 +106,15 @@ class Thanks extends Component {
       <div className="EventApplication">
         <img src={logoH} className="logo" alt="logo" />
         <h1>
-          Popup Announcement!
+          Hi, {this.state.vendorName}!
         </h1>
-        <h1>
-          Populuxe Brewing, February 8th, 12 to 5pm
+        <h1 class="line-2">
+          There's a popup you might be interested in.
         </h1>
-        <h2>
-          Would you like to apply to be a vendor?
-        </h2>
+        <div>
+          WHERE: {this.state.venueName}<br/>
+          WHEN: {this.state.popupDateStr}
+        </div>
 
         {CollectInput}
 
