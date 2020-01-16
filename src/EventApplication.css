@@ -6,6 +6,45 @@
  *  yellow: #FECC63
  */
 
+  .btn-outline-secondary {
+    color: #19d8d6;
+    border-color: #19d8d6;
+  } 
+ 
+  .btn-outline-secondary:not(:disabled):not(.disabled).active, .btn-outline-secondary:not(:disabled):not(.disabled):active, .show>.btn-outline-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: #19d8d6;
+    border-color: #19d8d6;
+  }
+
+  .btn-outline-secondary:hover {
+    color: #fff;
+    background-color: #19d8d6;
+    border-color: #19d8d6;
+  }
+
+  .btn-outline-secondary.focus, .btn-outline-secondary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(25,216,214,.5);
+  }
+
+  .btn-primary {
+    color: #fff;
+    background-color: #D72847;
+    border-color: #D72847;
+  }
+
+  .btn-primary:hover {
+    color: #fff;
+    background-color: #a41e37;
+    border-color: #a41e37;
+  }
+
+  .btn-secondary {
+    color: #fff;
+    background-color: #19d8d6;
+    border-color: #19d8d6;
+  }
+
 .EventApplication {
   font-family: 'Roboto', sans-serif;
   text-align: center;
@@ -19,9 +58,9 @@
 
 .EventApplication .logo {
   /*animation: App-logo-appear 1 0.7s ease-in;*/
-  width: 360px;
+  width: 200px;
   margin-top: 30px;
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 .EventApplication h1 {
@@ -31,8 +70,37 @@
   line-height: 38px;
   letter-spacing: 1.4px;
   margin-top: 1px;
-  margin-bottom: 30px;
+  margin-bottom: 4px;
   color: black;
+}
+
+.EventApplication h1.line-2 {
+  margin-bottom: 40px;
+}
+
+.EventApplication .popup-info {
+  font-size: 19px;
+  line-height: 29px;
+  font-weight: 300;
+}
+
+.EventApplication .prompt {
+  font-size: 19px;
+  line-height: 29px;
+  margin-top: 20px;
+}
+
+.EventApplication .popup-info:first-child {
+  height: 10px;
+}
+
+.EventApplication .popup-info .badge {
+  font-size: 10px;
+  line-height: 10px;;
+}
+
+.EventApplication .popup-info .info-line {
+  margin-bottom: 6px;
 }
 
 .EventApplication h1 span.em {
@@ -41,12 +109,18 @@
 
 .EventApplication h2 {
   color: black;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .EventApplication #share {
 	width: 100%;
   margin: 40px auto;
   text-align: center;
+}
+
+.btn-toolbar:last-child {
+  margin-left: 4px;
 }
 
 /* buttons */

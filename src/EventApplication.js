@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logoH from './images/ocm-logo-horizontal.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram, faSnapchatGhost } from '@fortawesome/free-brands-svg-icons';
+import Badge from 'react-bootstrap/Badge';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import Button from 'react-bootstrap/Button';
@@ -10,8 +11,7 @@ import Airtable from 'airtable';
 import './EventApplication.css';
 
 var base = new Airtable({apiKey: 'keypOFMtu4yRbrp9j'}).base('appUOvrlIHxc0JGyX');
-
-class Thanks extends Component {
+class EventApplication extends Component {
   constructor(props, state) {
     super(props);
     this.onToggleChange = this.onToggleChange.bind(this);
@@ -21,26 +21,25 @@ class Thanks extends Component {
       isSubmitted: false,
       vendorName: '',
       venueName: '',
-      popupDateStr: ''
+      popupDateStr: '',
+      isLoading: true
     };
     console.log(props.match.params.id);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     let that = this;
     base('Popup Vendors').find(this.props.match.params.id, function(err, record) {
       if (err) { console.error(err); return; }
       console.log('Retrieved', record);
       that.setState({
-        venueName: record.fields['Popup Venue Name'], 
+        venueName: record.fields['Popup Venue Name'],
         vendorName: record.fields['Vendor Business Name'],
         popupDateStr: record.fields['Popup Easy Date String'],
+        isLoading: false
       });
-      let status = record.fields['Status'];
-      if (status !== 'Invited') {
-        that.setState({
-          isSubmitted: true
-        });
+      if (record.fields.Status !== 'Invited') {
+        that.setState({isSubmitted: true});
       }
     });
   }
@@ -78,29 +77,28 @@ class Thanks extends Component {
     let CollectInput;
     if (this.state.isSubmitted) {
       CollectInput = 
-        <div>
-          <h2>Thanks, we got your response!</h2> 
-          <p>We'll be in touch in a couple days.</p>
-        </div>
+        <h2 className="prompt">Thanks, we got your response and will be in touch!</h2>
     } else {
       CollectInput = 
         <div>
-          <h2>
+          <h2 className="prompt">
             Would you like to apply to be a vendor?
           </h2>
           <ButtonToolbar className="chart-controls justify-content-md-center">
             <ToggleButtonGroup type="radio" name="Apply" value={this.state.applyState} onChange={this.onToggleChange}>
-                    <ToggleButton value="Applied" type="radio" variant="light">Yes, I'd like to apply</ToggleButton>
-                    <ToggleButton value="Busy" type="radio" variant="light">I'm busy that day</ToggleButton>
-                    <ToggleButton value="Declined" type="radio" variant="light">Not interested</ToggleButton>
+                    <ToggleButton value="Applied" type="radio" variant="outline-secondary">Yes</ToggleButton>
+                    <ToggleButton value="Busy" type="radio" variant="outline-secondary">I'm too busy</ToggleButton>
+                    <ToggleButton value="Declined" type="radio" variant="outline-secondary">Not interested</ToggleButton>
             </ToggleButtonGroup>
-          </ButtonToolbar>
-          <ButtonToolbar className="chart-controls justify-content-md-center">
-            <Button variant="primary" size="lg" onClick={this.onSubmit}>
+            <Button variant="primary" onClick={this.onSubmit}>
               Submit
             </Button>
           </ButtonToolbar>
         </div>
+    }
+
+    if ((this.state.isLoading)) {
+      return <div></div>
     }
     return (
       <div className="EventApplication">
@@ -108,12 +106,12 @@ class Thanks extends Component {
         <h1>
           Hi, {this.state.vendorName}!
         </h1>
-        <h1 class="line-2">
-          There's a popup you might be interested in.
+        <h1 className="line-2">
+          We have a popup you might be interested in.
         </h1>
-        <div>
-          WHERE: {this.state.venueName}<br/>
-          WHEN: {this.state.popupDateStr}
+        <div className="popup-info">
+          <div>{this.state.venueName}</div>
+          <div>{this.state.popupDateStr}</div>
         </div>
 
         {CollectInput}
@@ -129,4 +127,4 @@ class Thanks extends Component {
   }
 }
 
-export default Thanks;
+export default EventApplication;
