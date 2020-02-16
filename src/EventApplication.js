@@ -20,7 +20,7 @@ class EventApplication extends Component {
       applyState: '',
       isSubmitted: false,
       vendorName: '',
-      venueName: '',
+      popupName: '',
       popupDateStr: '',
       isLoading: true
     };
@@ -33,12 +33,13 @@ class EventApplication extends Component {
       if (err) { console.error(err); return; }
       console.log('Retrieved', record);
       that.setState({
-        venueName: record.fields['Popup Venue Name'],
+        popupName: record.fields['Popup Name'],
         vendorName: record.fields['Vendor Business Name'],
         popupDateStr: record.fields['Popup Easy Date String'],
+        venueImg: record.fields['Popup Image Url'],
         isLoading: false
       });
-      if (record.fields.Status !== 'Invited') {
+      if (!(record.fields.Status === 'Invited' || record.fields.Status === 'To Invite')) {
         that.setState({isSubmitted: true});
       }
     });
@@ -80,17 +81,14 @@ class EventApplication extends Component {
         <h2 className="prompt">Thanks, we got your response and will be in touch!</h2>
     } else {
       CollectInput = 
-        <div>
-          <h2 className="prompt">
-            Would you like to apply to be a vendor?
-          </h2>
+        <div className="inputContainer">
           <ButtonToolbar className="chart-controls justify-content-md-center">
             <ToggleButtonGroup type="radio" name="Apply" value={this.state.applyState} onChange={this.onToggleChange}>
-                    <ToggleButton value="Applied" type="radio" variant="outline-secondary">Yes</ToggleButton>
-                    <ToggleButton value="Busy" type="radio" variant="outline-secondary">I'm too busy</ToggleButton>
-                    <ToggleButton value="Declined" type="radio" variant="outline-secondary">Not interested</ToggleButton>
+                    <ToggleButton value="Applied" type="radio" variant="outline-secondary" size="lg">Yes</ToggleButton>
+                    <ToggleButton value="Busy" type="radio" variant="outline-secondary" size="lg">I'm too busy</ToggleButton>
+                    <ToggleButton value="Declined" type="radio" variant="outline-secondary" size="lg">Not interested</ToggleButton>
             </ToggleButtonGroup>
-            <Button variant="primary" onClick={this.onSubmit}>
+            <Button className="submitButton" variant="primary" size="lg" onClick={this.onSubmit}>
               Submit
             </Button>
           </ButtonToolbar>
@@ -107,20 +105,15 @@ class EventApplication extends Component {
           Hi, {this.state.vendorName}!
         </h1>
         <h1 className="line-2">
-          We have a popup you might be interested in.
+          Apply to our {this.state.popupName}?
         </h1>
         <div className="popup-info">
-          <div>{this.state.venueName}</div>
-          <div>{this.state.popupDateStr}</div>
+          {this.state.popupDateStr}
         </div>
 
         {CollectInput}
 
-        <div id="share">
-          <a className="social" href="https://www.facebook.com/opencitymkt/" target="blank"><FontAwesomeIcon icon={faFacebookF} /></a>
-          <a className="social" href="https://twitter.com/opencitymarket" target="blank"><FontAwesomeIcon icon={faTwitter} /></a>
-          <a className="social" href="https://instagram.com/opencitymarket" target="blank"><FontAwesomeIcon icon={faInstagram} /></a>
-        </div>
+        <img className="popupImg" src={this.state.venueImg} alt="map of ballard breweries"/>
 
       </div>
     );
