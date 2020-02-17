@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import logoH from './images/ocm-logo-horizontal.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faTwitter, faInstagram, faSnapchatGhost } from '@fortawesome/free-brands-svg-icons';
-import Badge from 'react-bootstrap/Badge';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import Button from 'react-bootstrap/Button';
@@ -22,6 +19,7 @@ class EventApplication extends Component {
       vendorName: '',
       popupName: '',
       popupDateStr: '',
+      popupDisclaimer: '',
       isLoading: true
     };
     console.log(props.match.params.id);
@@ -37,6 +35,7 @@ class EventApplication extends Component {
         vendorName: record.fields['Vendor Business Name'],
         popupDateStr: record.fields['Popup Easy Date String'],
         venueImg: record.fields['Popup Image Url'],
+        popupDisclaimer: record.fields['Popup Disclaimer'],
         isLoading: false
       });
       if (!(record.fields.Status === 'Invited' || record.fields.Status === 'To Invite')) {
@@ -85,7 +84,7 @@ class EventApplication extends Component {
           <ButtonToolbar className="chart-controls justify-content-md-center">
             <ToggleButtonGroup type="radio" name="Apply" value={this.state.applyState} onChange={this.onToggleChange}>
                     <ToggleButton value="Applied" type="radio" variant="outline-secondary" size="lg">Yes</ToggleButton>
-                    <ToggleButton value="Busy" type="radio" variant="outline-secondary" size="lg">I'm too busy</ToggleButton>
+                    <ToggleButton value="Busy" type="radio" variant="outline-secondary" size="lg">No, too busy</ToggleButton>
                     <ToggleButton value="Declined" type="radio" variant="outline-secondary" size="lg">Not interested</ToggleButton>
             </ToggleButtonGroup>
             <Button className="submitButton" variant="primary" size="lg" onClick={this.onSubmit}>
@@ -114,6 +113,7 @@ class EventApplication extends Component {
         {CollectInput}
 
         <img className="popupImg" src={this.state.venueImg} alt="map of ballard breweries"/>
+        <div className="popupDisclaimer">{this.state.popupDisclaimer}</div>
 
       </div>
     );

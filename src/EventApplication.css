@@ -93,7 +93,13 @@
 
 .EventApplication .popupImg {
   width: 600px;
-  margin: 80px 0 40px 0;
+  margin: 80px 0 10px 0;
+}
+
+.popupDisclaimer {
+    font-weight: 200;
+    margin-bottom: 40px;
+    font-size: 18px;
 }
 
 .EventApplication h1 span.em {
@@ -138,7 +144,12 @@
 
   .EventApplication .popupImg {
     width: 100%;
-    margin: 60px 0px 0px 0px;
+    margin: 60px 0px 5px 0px;
+  }
+
+  .popupDisclaimer {
+    margin-bottom: 5px;
+    font-size: 16px;
   }
 
   .btn {
